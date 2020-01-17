@@ -1,4 +1,4 @@
-import {addonConfigureActions} from '@storybook/addon-knobs';
+import {configureActions as addonConfigureActions} from '@storybook/addon-actions';
 
 function configureActions(opts) {
 	return addonConfigureActions({
@@ -10,4 +10,3 @@ function configureActions(opts) {
 
 export default configureActions;
 export {configureActions};
-

@@ -6,11 +6,9 @@
  * `nullify(select('propName', ['', 'value', 'two']))`
  * `nullify(boolean('propName', false))`
  *
-*/
+ */
 
-const nullify = (v) => !v ? void 0 : v;
+const nullify = v => (!v ? void 0 : v);
 
 export default nullify;
-export {
-	nullify
-};
+export {nullify};

@@ -1,4 +1,4 @@
-import {addonWithKnobs} from '@storybook/addon-knobs';
+import {withKnobs as addonWithKnobs} from '@storybook/addon-knobs';
 
 function withKnobs(opts) {
 	return addonWithKnobs({
@@ -10,4 +10,3 @@ function withKnobs(opts) {
 
 export default withKnobs;
 export {withKnobs};
-

@@ -3,7 +3,7 @@ const merge = (components, field) => {
 };
 
 const mergeComponentMetadata = (displayName, ...components) => {
-	const fn = function () {};
+	const fn = function() {};
 	fn.displayName = displayName;
 	fn.groupId = displayName;
 	fn.propTypes = merge(components, 'propTypes');
@@ -18,12 +18,9 @@ const removeProps = (component, props) => {
 	}
 
 	props.forEach(prop => {
-		delete component.propTypes[prop];	// eslint-disable-line react/forbid-foreign-prop-types
+		delete component.propTypes[prop];
 		delete component.defaultProps[prop];
 	});
 };
 
-export {
-	mergeComponentMetadata,
-	removeProps
-};
+export {mergeComponentMetadata, removeProps};

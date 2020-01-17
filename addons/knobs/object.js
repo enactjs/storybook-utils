@@ -1,7 +1,7 @@
 import {object as objectKnob} from '@storybook/addon-knobs';
-
 import nullify from '../../nullify.js';
 
+/* eslint-disable no-shadow */
 /*
  * `object` is used just like the standard `object` knob, but instead a `Config` object is passed
  * in to determine the default value and possibly other future things! Values are automatically
@@ -14,7 +14,7 @@ import nullify from '../../nullify.js';
  * * knob/property name string
  * * Config object with at least a `defaultProps` key containing a map of props and their default values
  * * (Optional) a sample-specific initially selected value
-*/
+ */
 
 const object = (name, Config, preferredObject) => {
 	if (typeof Config === 'object' || Config == null) {
@@ -33,10 +33,8 @@ const object = (name, Config, preferredObject) => {
 		Config.groupId = Config.displayName;
 	}
 
-	return nullify(objectKnob(name, (preferredObject || Config.defaultProps[name]), Config.groupId));
+	return nullify(objectKnob(name, preferredObject || Config.defaultProps[name], Config.groupId));
 };
 
 export default object;
-export {
-	object
-};
+export {object};

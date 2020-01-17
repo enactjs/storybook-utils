@@ -1,7 +1,7 @@
 import {select as selectKnob} from '@storybook/addon-knobs';
-
 import nullify from '../../nullify.js';
 
+/* eslint-disable no-shadow */
 /*
  * `select` is used just like the standard `selectV2` knob, but instead a `Config` object is passed
  * in to determine the default value and possibly other future things! Values are automatically
@@ -15,7 +15,7 @@ import nullify from '../../nullify.js';
  * * collection of selectable values, array or object/hash
  * * Config object with at least a `defaultProps` key containing a map of props and their default values
  * * (Optional) a sample-specific initially selected value
-*/
+ */
 
 const defaultString = ' (Default)';
 
@@ -38,9 +38,7 @@ const select = (name, items, Config, selectedValue) => {
 		Config.groupId = Config.displayName;
 	}
 
-	const defaultValue = (typeof selectedValue === 'undefined') ?
-		Config.defaultProps[name] :
-		selectedValue;
+	const defaultValue = typeof selectedValue === 'undefined' ? Config.defaultProps[name] : selectedValue;
 
 	const defaultAppender = (key, label = key) => {
 		return (key || ' ') + (Config.defaultProps[name] === label ? defaultString : '');
@@ -48,7 +46,7 @@ const select = (name, items, Config, selectedValue) => {
 
 	if (items instanceof Array) {
 		// An array of items
-		items.forEach((item) => {
+		items.forEach(item => {
 			labels[defaultAppender(item)] = item;
 		});
 	} else {
@@ -62,6 +60,4 @@ const select = (name, items, Config, selectedValue) => {
 };
 
 export default select;
-export {
-	select
-};
+export {select};

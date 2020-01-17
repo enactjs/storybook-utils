@@ -1,5 +1,5 @@
-function loadStories () {
-	stories.keys().forEach((filename) => stories(filename));
+function loadStories(stories) {
+	return () => stories.keys().forEach(filename => stories(filename));
 }
 
 export default loadStories;

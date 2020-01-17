@@ -1,7 +1,7 @@
 import {boolean as booleanKnob} from '@storybook/addon-knobs';
-
 import nullify from '../../nullify.js';
 
+/* eslint-disable no-shadow */
 /*
  * `boolean` is used just like the standard `boolean` knob, but instead a `Config` object is passed
  * in to determine the default value and possibly other future things! Values are automatically
@@ -14,7 +14,7 @@ import nullify from '../../nullify.js';
  * * knob/property name string
  * * Config object with at least a `defaultProps` key containing a map of props and their default values
  * * (Optional) a sample-specific initially selected value
-*/
+ */
 
 const boolean = (name, Config, preferredValue) => {
 	if (typeof Config === 'string' || Config == null) {
@@ -34,12 +34,10 @@ const boolean = (name, Config, preferredValue) => {
 	}
 
 	// Set false for default boolean props that are not defined.
-	const defaultValue = (Config.defaultProps[name] != null) ? Config.defaultProps[name] : false;
+	const defaultValue = Config.defaultProps[name] != null ? Config.defaultProps[name] : false;
 
-	return nullify(booleanKnob(name, (preferredValue != null ? preferredValue : defaultValue), Config.groupId));
+	return nullify(booleanKnob(name, preferredValue != null ? preferredValue : defaultValue, Config.groupId));
 };
 
 export default boolean;
-export {
-	boolean
-};
+export {boolean};

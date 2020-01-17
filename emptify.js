@@ -6,11 +6,9 @@
  * `emptify(select('propName', [undefined, 'value', 'two']))`
  * `emptify(boolean('propName', false))`
  *
-*/
+ */
 
-const emptify = (v) => !v ? '' : v;
+const emptify = v => (!v ? '' : v);
 
 export default emptify;
-export {
-	emptify
-};
+export {emptify};

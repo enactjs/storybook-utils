@@ -1,4 +1,5 @@
 import {withInfo as addonWithInfo} from '@storybook/addon-info';
+import {Component} from 'react';
 
 // Fix for @storybook/addon-info which always needs at least an empty object for defaultProps.
 Component.defaultProps = {};

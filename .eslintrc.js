@@ -1,7 +1,13 @@
 module.exports = {
 	env: {
 		es6: true, // sets the 'ecmaVersion' parser option to 6
-		node: true
+		node: true,
+		browser: true
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"allowImportExportEverywhere": true
 	},
 	extends: ['eslint:recommended', 'plugin:prettier/recommended'],
 	plugins: ['import'],
@@ -57,7 +63,7 @@ module.exports = {
 		'import/named': 2,
 		'import/first': 1,
 		'import/no-duplicates': 2,
-		'import/extensions': [1, 'always', {js: 'never', json: 'always'}],
+		'import/extensions': 0,
 		'import/newline-after-import': 1,
 		'import/order': [1, {'newlines-between': 'never'}]
 	}

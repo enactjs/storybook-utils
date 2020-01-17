@@ -2,6 +2,7 @@ import {number as numberKnob} from '@storybook/addon-knobs';
 
 // import nullify from '../utils/nullify.js';
 
+/* eslint-disable no-shadow */
 /*
  * Enact `number` is used just like the `number` knob, but instead a `Config` object is passed in to
  * determine the default value and possibly other future things! Values are automatically nullified
@@ -14,7 +15,7 @@ import {number as numberKnob} from '@storybook/addon-knobs';
  * * Config object with at least a `defaultProps` key containing a map of props and their default values
  * * number-specific knob options (opts from the standard Knobs docs)
  * * (Optional) a sample-specific initially selected value
-*/
+ */
 
 const number = (name, Config, opts, preferredValue) => {
 	if (typeof opts === 'number') {
@@ -38,10 +39,8 @@ const number = (name, Config, opts, preferredValue) => {
 		Config.groupId = Config.displayName;
 	}
 
-	return numberKnob(name, (preferredValue != null ? preferredValue : Config.defaultProps[name]), opts, Config.groupId);
+	return numberKnob(name, preferredValue != null ? preferredValue : Config.defaultProps[name], opts, Config.groupId);
 };
 
 export default number;
-export {
-	number
-};
+export {number};

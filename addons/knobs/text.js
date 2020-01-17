@@ -1,7 +1,7 @@
 import {text as textKnob} from '@storybook/addon-knobs';
-
 import nullify from '../../nullify.js';
 
+/* eslint-disable no-shadow */
 /*
  * `text` is used just like the standard `text` knob, but instead a `Config` object is passed
  * in to determine the default value and possibly other future things! Values are automatically
@@ -14,7 +14,7 @@ import nullify from '../../nullify.js';
  * * knob/property name string
  * * Config object with at least a `defaultProps` key containing a map of props and their default values
  * * (Optional) a sample-specific initially selected value
-*/
+ */
 
 const text = (name, Config, preferredValue) => {
 	if (typeof Config === 'string' || Config == null) {
@@ -33,10 +33,8 @@ const text = (name, Config, preferredValue) => {
 		Config.groupId = Config.displayName;
 	}
 
-	return nullify(textKnob(name, (preferredValue || Config.defaultProps[name]), Config.groupId));
+	return nullify(textKnob(name, preferredValue || Config.defaultProps[name], Config.groupId));
 };
 
 export default text;
-export {
-	text
-};
+export {text};
