@@ -1,7 +1,5 @@
 import {number as numberKnob} from '@storybook/addon-knobs';
 
-// import nullify from '../utils/nullify.js';
-
 /* eslint-disable no-shadow */
 /*
  * Enact `number` is used just like the `number` knob, but instead a `Config` object is passed in to

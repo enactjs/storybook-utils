@@ -21,7 +21,6 @@ function withInfo({styles = {}, ...opts} = {}) {
 			marginTop: '0px'
 		},
 		children: {
-			// backgroundColor: 'purple',  // For easier debugging
 			width: '100%',
 			height: '100%'
 		},
