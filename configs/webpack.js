@@ -58,7 +58,7 @@ module.exports = function(config, mode, dirname) {
 
 	// Modify stock Storybook config for Enact-tailored experience
 	config.devtool = shouldUseSourceMap && 'source-map';
-	config.resolve.modules = [path.resolve(__dirname, '..', 'node_modules'), 'node_modules'];
+	config.resolve.modules = [path.resolve(app.context, 'node_modules'), 'node_modules'];
 	config.devServer = {host: '0.0.0.0', port: 8080};
 	config.performance = {hints: false};
 
