@@ -59,6 +59,11 @@ module.exports = function(config, mode, dirname) {
 	// Modify stock Storybook config for Enact-tailored experience
 	config.devtool = shouldUseSourceMap && 'source-map';
 	config.resolve.modules = ['node_modules', path.resolve(app.context, 'node_modules')];
+	config.resolve.alias = Object.assign({}, config.resolve.alias, {
+		// coerce everything to use the ilib installed with the sampler
+		// since it is set as a peer dependency by the enact modules
+		ilib: path.resolve(app.context, 'node_modules/ilib')
+	});
 	config.devServer = {host: '0.0.0.0', port: 8080};
 	config.performance = {hints: false};
 
