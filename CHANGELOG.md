@@ -1,3 +1,7 @@
+## 1.0.2 (February 19, 2020)
+
+* Resolve `ilib` dependency direct from storybook project resolution.
+
 ## 1.0.1 (January 23, 2020)
 
 * Update module resolve order such that relative node_modules take priority.
