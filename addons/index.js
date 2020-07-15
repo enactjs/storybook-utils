@@ -4,6 +4,6 @@
  * There is no `default` for this file.
  */
 
-export * as actions from './actions/index.js';
-export * as knobs from './knobs/index.js';
-export * as info from './info.js';
+export * as actions from './actions';
+export * as knobs from './knobs';
+export * as info from './info';

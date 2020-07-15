@@ -1,3 +1,3 @@
 import './actions/register';
 import './knobs/register';
-import './manager-styles.js';
+import './manager-styles';

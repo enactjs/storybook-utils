@@ -3,7 +3,7 @@ const merge = (components, field) => {
 };
 
 const mergeComponentMetadata = (displayName, ...components) => {
-	const fn = function() {};
+	const fn = function () {};
 	fn.displayName = displayName;
 	fn.groupId = displayName;
 	fn.propTypes = merge(components, 'propTypes');

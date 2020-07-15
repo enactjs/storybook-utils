@@ -4,5 +4,5 @@
  * There is no `default` for this file.
  */
 
-export * from './configure.js';
-export * from './action.js';
+export * from './configure';
+export * from './action';
