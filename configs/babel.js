@@ -1,5 +1,5 @@
 /*
- *  babel.config.js
+ *  babel.js
  *
  *  A Babel javascript configuration dynamically setup for Enact
  *  development environment on target platforms.
