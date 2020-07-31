@@ -85,7 +85,7 @@ module.exports = function (config, mode, dirname) {
 			exclude: /node_modules.(?!@enact)/,
 			loader: require.resolve('babel-loader'),
 			options: {
-				configFile: path.join(dirname, 'babel.js'),
+				configFile: path.join(dirname, 'babel.config.js'),
 				babelrc: false,
 				cacheDirectory: !isProduction,
 				cacheCompression: false,
