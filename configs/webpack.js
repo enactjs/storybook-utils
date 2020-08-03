@@ -4,7 +4,7 @@ const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
 const {DefinePlugin} = require('webpack');
 const {optionParser: app, GracefulFsPlugin, ILibPlugin, WebOSMetaPlugin} = require('@enact/dev-utils');
 
-module.exports = function(config, mode, dirname) {
+module.exports = function (config, mode, dirname) {
 	const isProduction = mode === 'PRODUCTION';
 	const shouldUseSourceMap = (process.env.GENERATE_SOURCEMAP || 'true') !== 'false';
 
@@ -38,6 +38,7 @@ module.exports = function(config, mode, dirname) {
 								stage: 3,
 								features: {'custom-properties': false}
 							}),
+							require('postcss-normalize')(),
 							app.ri && require('postcss-resolution-independence')(app.ri)
 						].filter(Boolean)
 				}
@@ -51,7 +52,9 @@ module.exports = function(config, mode, dirname) {
 		getStyleLoaders(cssLoaderOptions, {
 			loader: require.resolve('less-loader'),
 			options: {
-				modifyVars: Object.assign({__DEV__: !isProduction}, app.accent),
+				lessOptions: {
+					modifyVars: Object.assign({__DEV__: !isProduction}, app.accent)
+				},
 				sourceMap: shouldUseSourceMap
 			}
 		});
@@ -65,7 +68,7 @@ module.exports = function(config, mode, dirname) {
 		ilib: path.resolve(app.context, 'node_modules/ilib')
 	});
 	config.devServer = {host: '0.0.0.0', port: 8080};
-	config.performance = {hints: false};
+	config.performance = false;
 
 	// Narrow rules into oneOf and add our custom rules first
 	config.module.rules = [{oneOf: config.module.rules}];
@@ -78,21 +81,16 @@ module.exports = function(config, mode, dirname) {
 			}
 		},
 		{
-			test: /\.(js|jsx|ts|tsx)$/,
+			test: /\.(js|mjs|jsx|ts|tsx)$/,
 			exclude: /node_modules.(?!@enact)/,
-			use: [
-				{
-					loader: require.resolve('babel-loader'),
-					options: {
-						configFile: path.join(dirname, 'babel.config.js'),
-						babelrc: false,
-						cacheDirectory: !isProduction,
-						cacheCompression: false,
-						highlightCode: true,
-						compact: isProduction
-					}
-				}
-			]
+			loader: require.resolve('babel-loader'),
+			options: {
+				configFile: path.join(dirname, 'babel.config.js'),
+				babelrc: false,
+				cacheDirectory: !isProduction,
+				cacheCompression: false,
+				compact: isProduction
+			}
 		},
 		{
 			test: /\.module\.css$/,
