@@ -5,7 +5,7 @@
  *  development environment on target platforms.
  */
 
-module.exports = function(api) {
+module.exports = function (api) {
 	const env = process.env.BABEL_ENV || process.env.NODE_ENV;
 	const es5Standalone = process.env.ES5 && process.env.ES5 !== 'false';
 
@@ -17,6 +17,9 @@ module.exports = function(api) {
 				require('@babel/preset-env').default,
 				{
 					exclude: [
+						// Exclude transforms that make all code slower
+						'transform-typeof-symbol',
+						// Exclude chunky/costly transforms
 						'transform-regenerator',
 						// Ignore web features since window and DOM is not available
 						// in a V8 snapshot blob.
@@ -61,10 +64,10 @@ module.exports = function(api) {
 			// '@babel/plugin-proposal-do-expressions',
 
 			// Stage 2
-			// ['@babel/plugin-proposal-decorators', { 'legacy': true }],
+			[require('@babel/plugin-proposal-decorators').default, false],
 			// '@babel/plugin-proposal-function-sent',
 			require('@babel/plugin-proposal-export-namespace-from').default,
-			// '@babel/plugin-proposal-numeric-separator',
+			require('@babel/plugin-proposal-numeric-separator').default,
 			// '@babel/plugin-proposal-throw-expressions',
 
 			// Stage 3
@@ -73,7 +76,12 @@ module.exports = function(api) {
 			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
 			// '@babel/plugin-proposal-json-strings'
 
+			// Soon to be included within pre-env; include here until then
+			require('@babel/plugin-proposal-optional-chaining').default,
+			require('@babel/plugin-proposal-nullish-coalescing-operator').default,
+
 			require('babel-plugin-dev-expression'),
+			env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
 			env === 'production' && !es5Standalone && require('@babel/plugin-transform-react-inline-elements').default
 		].filter(Boolean)
 	};

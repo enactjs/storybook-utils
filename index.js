@@ -4,7 +4,7 @@ function loadStories(stories) {
 
 export default loadStories;
 export {loadStories};
-export * from './propTables.js';
-export * from './nullify.js';
-export * from './emptify.js';
-export * as addons from './addons/index.js';
+export * from './propTables';
+export * from './nullify';
+export * from './emptify';
+export * as addons from './addons';

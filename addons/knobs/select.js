@@ -1,5 +1,5 @@
 import {select as selectKnob} from '@storybook/addon-knobs';
-import nullify from '../../nullify.js';
+import nullify from '../../nullify';
 
 /* eslint-disable no-shadow */
 /*
