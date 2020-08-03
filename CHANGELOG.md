@@ -1,3 +1,11 @@
+## 2.0.0 (August 3, 2020)
+
+* Updated codebase to latest Enact linting standards.
+* Updates dependencies for latest releases.
+* Added `postcss-normalize` support.
+* Adds `optional-chaining` , `nullish-coalescing-operator`, and `numeric-separator` Babel plugins.
+* Excludes `transform-typeof-symbol` Babel transform.
+
 ## 1.0.2 (February 19, 2020)
 
 * Resolve `ilib` dependency direct from storybook project resolution.
