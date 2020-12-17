@@ -6,4 +6,3 @@
 
 export * as actions from './actions';
 export * as knobs from './knobs';
-export * as info from './info';
