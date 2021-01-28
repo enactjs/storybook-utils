@@ -117,11 +117,11 @@ module.exports = function (config, mode, dirname) {
 			sideEffects: true
 		}
 	);
-	
+
 	// File-loader catch-all for any remaining unhandled extensions
 	config.module.rules[0].oneOf.push({
 		loader: require.resolve('file-loader'),
-		exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
+		exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/]
 	});
 
 	// Run `source-loader` on story files to show their source code
@@ -137,7 +137,7 @@ module.exports = function (config, mode, dirname) {
 			inspectDependencies: false
 		}
 	});
-	
+
 	config.plugins.push(
 		new DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
