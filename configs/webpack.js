@@ -121,7 +121,10 @@ module.exports = function (config, mode, dirname) {
 	// File-loader catch-all for any remaining unhandled extensions
 	config.module.rules[0].oneOf.push({
 		loader: require.resolve('file-loader'),
-		exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/]
+		exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
+		options: {
+			name: '[path][name].[ext]'
+		}
 	});
 
 	// Run `source-loader` on story files to show their source code
