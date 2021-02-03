@@ -81,7 +81,6 @@ module.exports = function (api) {
 			require('@babel/plugin-proposal-nullish-coalescing-operator').default,
 
 			require('babel-plugin-dev-expression'),
-			require('@babel/plugin-transform-react-jsx'),
 			env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
 			env === 'production' && !es5Standalone && require('@babel/plugin-transform-react-inline-elements').default
 		].filter(Boolean)
