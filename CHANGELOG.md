@@ -2,6 +2,7 @@
 
 ### Changed
 
+* Fix configuration for react17
 * Migrated storybook from 5.3 to 6.1.
 * Replaced `@storybook/addon-info` with `@storybook/addon-docs`.
 * Updates dependencies for storybook migration
