@@ -1,3 +1,11 @@
+## [unreleased]
+
+### Changed
+
+* Migrated storybook from 5.3 to 6.1.
+* Replaced `@storybook/addon-info` with `@storybook/addon-docs`.
+* Updates dependencies for storybook migration
+
 ## 2.0.0 (August 3, 2020)
 
 * Updated codebase to latest Enact linting standards.
