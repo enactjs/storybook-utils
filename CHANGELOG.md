@@ -1,3 +1,7 @@
+## unreleased
+
+* Updated dependencies including React17
+
 ## 2.0.0 (August 3, 2020)
 
 * Updated codebase to latest Enact linting standards.
