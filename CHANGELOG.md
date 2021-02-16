@@ -1,4 +1,4 @@
-## unreleased
+## 3.0.0 (February 16, 2021)
 
 * Updated dependencies including React17
 
