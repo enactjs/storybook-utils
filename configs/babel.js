@@ -5,6 +5,16 @@
  *  development environment on target platforms.
  */
 
+// Check if JSX transform is able
+const hasJsxRuntime = (() => {
+	try {
+		require.resolve('react/jsx-runtime');
+		return true;
+	} catch (e) {
+		return false;
+	}
+})();
+
 module.exports = function (api) {
 	const env = process.env.BABEL_ENV || process.env.NODE_ENV;
 	const es5Standalone = process.env.ES5 && process.env.ES5 !== 'false';
@@ -81,7 +91,7 @@ module.exports = function (api) {
 			require('@babel/plugin-proposal-nullish-coalescing-operator').default,
 
 			require('babel-plugin-dev-expression'),
-			require('@babel/plugin-transform-react-jsx'),
+			[require('@babel/plugin-transform-react-jsx'), hasJsxRuntime ? {runtime: 'automatic'} : {}],
 			env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
 			env === 'production' && !es5Standalone && require('@babel/plugin-transform-react-inline-elements').default
 		].filter(Boolean)
