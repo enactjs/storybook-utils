@@ -12,15 +12,16 @@ import nullify from '../../nullify';
  *
  * Arguments:
  * * knob/property name string
+ * * callback function
  * * Config object with at least a `defaultProps` key containing a map of props and their default values
- * * (Optional) a sample-specific initially selected value
  */
 
-const button = (name, callback, Config, preferredValue) => {
+const button = (name, callback, Config) => {
 	if (typeof Config === 'string' || Config == null) {
-		// Config wasn't set, or was omitted, causing the preferredValue to be the last value. Reassignment dipsy-doodle.
-		preferredValue = Config;
-		Config = {};
+		// Config wasn't set, or was omitted, create groupId property from it.
+		Config = {
+			groupId: Config
+		};
 	}
 
 	// If there is no `defaultProps` object on the Config object
@@ -33,7 +34,7 @@ const button = (name, callback, Config, preferredValue) => {
 		Config.groupId = Config.displayName;
 	}
 
-	return nullify(buttonKnob(name, callback, preferredValue || Config.defaultProps[name], Config.groupId));
+	return nullify(buttonKnob(name, callback, Config.groupId));
 };
 
 export default button;
