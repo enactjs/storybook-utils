@@ -6,6 +6,7 @@
 
 export * from './configure';
 export * from './boolean';
+export * from './button';
 export * from './number';
 export * from './object';
 export * from './select';

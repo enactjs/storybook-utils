@@ -57,7 +57,7 @@ module.exports = function (api) {
 					development: env !== 'production' && !es5Standalone,
 					// Will use the native built-in instead of trying to polyfill
 					// behavior for any plugins that require one.
-					useBuiltIns: true
+					...(!hasJsxRuntime ? {useBuiltIns: true} : {runtime: 'automatic'})
 				}
 			]
 		],
@@ -91,7 +91,6 @@ module.exports = function (api) {
 			require('@babel/plugin-proposal-nullish-coalescing-operator').default,
 
 			require('babel-plugin-dev-expression'),
-			[require('@babel/plugin-transform-react-jsx'), hasJsxRuntime ? {runtime: 'automatic'} : {}],
 			env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
 			env === 'production' && !es5Standalone && require('@babel/plugin-transform-react-inline-elements').default
 		].filter(Boolean)

@@ -117,12 +117,27 @@ module.exports = function (config, mode, dirname) {
 			sideEffects: true
 		}
 	);
+
 	// File-loader catch-all for any remaining unhandled extensions
 	config.module.rules[0].oneOf.push({
 		loader: require.resolve('file-loader'),
 		exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
 		options: {
 			name: '[path][name].[ext]'
+		}
+	});
+
+	// Run `source-loader` on story files to show their source code
+	// automatically in `DocsPage` or the `Source` doc block.
+	config.module.rules.push({
+		test: /\.([jt]sx?)$/,
+		loader: require.resolve('@storybook/source-loader'),
+		exclude: [/node_modules/],
+		enforce: 'pre',
+		options: {
+			injectParameters: true,
+			inspectLocalDependencies: false,
+			inspectDependencies: false
 		}
 	});
 
