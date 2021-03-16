@@ -1,4 +1,4 @@
-## unreleased
+## 4.0.0 (March 16, 2021)
 
 * Migrate storybook from 5.3 to 6.1.
 * Replace `@storybook/addon-info` with `@storybook/addon-docs`.
