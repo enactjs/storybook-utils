@@ -4,6 +4,4 @@
  * There is no `default` for this file.
  */
 
-export * as actions from './actions';
-export * as docs from './docs';
-export * as knobs from './knobs';
+export * from './docs';

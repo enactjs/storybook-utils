@@ -1,6 +1,11 @@
+## unreleased
+
+* Migrate storybook from 5.3 to 6.1.
+* Replace `@storybook/addon-info` with `@storybook/addon-docs`.
+
 ## 3.0.0 (February 16, 2021)
 
-* Updated dependencies including React17
+* Updated dependencies including React17.
 
 ## 2.0.0 (August 3, 2020)
 
