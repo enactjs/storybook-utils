@@ -1,6 +1,6 @@
 {
   "name": "@enact/storybook-utils",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Helper utilities for using Enact in Storybook projects.",
   "main": "index.js",
   "author": "Jason Robitaille <jason.robitaille@lge.com>",
