@@ -1,3 +1,7 @@
+## 4.0.1 (June 30, 2021)
+
+* Changed to the storybook released module version to `6.2.9` to avoid build error temporarily.
+
 ## 4.0.0 (March 16, 2021)
 
 * Migrate storybook from 5.3 to 6.1.
