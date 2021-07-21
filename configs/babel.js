@@ -84,6 +84,8 @@ module.exports = function (api) {
 			require('@babel/plugin-syntax-dynamic-import').default,
 			// '@babel/plugin-syntax-import-meta',
 			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
+			[require('@babel/plugin-proposal-private-methods').default, {loose: true}],
+			[require('@babel/plugin-proposal-private-property-in-object').default, {loose: true}],
 			// '@babel/plugin-proposal-json-strings'
 
 			// Soon to be included within pre-env; include here until then
