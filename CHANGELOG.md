@@ -1,6 +1,6 @@
 ## unreleased
 
-* Adds `private-methods`, and `private-property-in-object` Babel plugins with {loose: true} option.
+* Added `private-methods` and `private-property-in-object` Babel plugins to remove warning.
 
 ## 4.0.1 (June 30, 2021)
 
