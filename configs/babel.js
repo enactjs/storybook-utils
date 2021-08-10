@@ -77,8 +77,6 @@ module.exports = function (api) {
 			// Stage 2
 			[require('@babel/plugin-proposal-decorators').default, false],
 			// '@babel/plugin-proposal-function-sent',
-			require('@babel/plugin-proposal-export-namespace-from').default,
-			require('@babel/plugin-proposal-numeric-separator').default,
 			// '@babel/plugin-proposal-throw-expressions',
 
 			// Stage 3
@@ -86,8 +84,6 @@ module.exports = function (api) {
 			// '@babel/plugin-syntax-import-meta',
 			// '@babel/plugin-proposal-json-strings'
 
-			// Soon to be included within pre-env; include here until then
-			require('@babel/plugin-proposal-optional-chaining').default,
 			require('@babel/plugin-proposal-nullish-coalescing-operator').default,
 
 			require('babel-plugin-dev-expression'),

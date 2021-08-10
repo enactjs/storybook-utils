@@ -1,6 +1,6 @@
 ## unreleased
 
-* Remove `class-properties` Babel plugin because it already included in `babel-preset-env`.
+* Remove Babel plugin because it already included in `babel-preset-env` v7.15.0.
 
 ## 4.0.1 (June 30, 2021)
 
