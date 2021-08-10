@@ -1,6 +1,6 @@
 ## unreleased
 
-* Added `private-methods` and `private-property-in-object` Babel plugins to remove warning.
+* Remove `class-properties` Babel plugin because it already included in `babel-preset-env`.
 
 ## 4.0.1 (June 30, 2021)
 

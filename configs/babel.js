@@ -46,7 +46,8 @@ module.exports = function (api) {
 					forceAllTransforms: es5Standalone,
 					useBuiltIns: 'entry',
 					corejs: 3,
-					modules: false
+					modules: false,
+					loose: true
 				}
 			],
 			[
@@ -83,9 +84,6 @@ module.exports = function (api) {
 			// Stage 3
 			require('@babel/plugin-syntax-dynamic-import').default,
 			// '@babel/plugin-syntax-import-meta',
-			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
-			[require('@babel/plugin-proposal-private-methods').default, {loose: true}],
-			[require('@babel/plugin-proposal-private-property-in-object').default, {loose: true}],
 			// '@babel/plugin-proposal-json-strings'
 
 			// Soon to be included within pre-env; include here until then
