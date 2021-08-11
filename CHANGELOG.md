@@ -1,6 +1,6 @@
 ## unreleased
 
-* Remove Babel plugins because these were already included in `babel-preset-env` v7.15.0.
+* Removed some Babel plugins which were already included in the recent `@babel/preset-env`.
 
 ## 4.0.1 (June 30, 2021)
 
