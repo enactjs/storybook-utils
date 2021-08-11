@@ -80,11 +80,9 @@ module.exports = function (api) {
 			// '@babel/plugin-proposal-throw-expressions',
 
 			// Stage 3
-			require('@babel/plugin-syntax-dynamic-import').default,
 			// '@babel/plugin-syntax-import-meta',
 			// '@babel/plugin-proposal-json-strings'
 
-			require('@babel/plugin-proposal-nullish-coalescing-operator').default,
 
 			require('babel-plugin-dev-expression'),
 			env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
