@@ -1,3 +1,7 @@
+## 4.0.2 (August 17, 2021)
+
+* Removed some Babel plugins which were already included in the recent `@babel/preset-env`.
+
 ## 4.0.1 (June 30, 2021)
 
 * Changed to the storybook released module version to `6.2.9` to avoid build error temporarily.
