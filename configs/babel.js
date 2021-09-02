@@ -77,6 +77,7 @@ module.exports = function (api) {
 			// Stage 2
 			[require('@babel/plugin-proposal-decorators').default, false],
 			// '@babel/plugin-proposal-function-sent',
+			require('@babel/plugin-proposal-export-namespace-from').default,
 			// '@babel/plugin-proposal-throw-expressions',
 
 			// Stage 3
