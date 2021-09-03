@@ -1,3 +1,7 @@
+### Changed
+
+* Replace `@storybook/addon-knobs` with `@storybook/addon-controls`, `@storybook/addon-toolbars`.
+
 ## 4.0.2 (August 17, 2021)
 
 * Removed some Babel plugins which were already included in the recent `@babel/preset-env`.
