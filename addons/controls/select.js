@@ -18,6 +18,11 @@ const select = (name, storyObj, items, config, selectedValue) => {
 		storyObj.argTypes = {};
 	}
 
+	// If there's no group ID but there is a display name, use that for the group ID
+	if (config.displayName && !config.groupId) {
+		config.groupId = config.displayName;
+	}
+
 	// If there is no `defaultProps` object on the config object
 	if (!config.defaultProps) {
 		config.defaultProps = {};
@@ -44,6 +49,9 @@ const select = (name, storyObj, items, config, selectedValue) => {
 		options: labels,
 		control: {
 			type: 'select'
+		},
+		table: {
+			category: config.groupId
 		}
 	};
 };

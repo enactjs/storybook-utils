@@ -1,12 +1,7 @@
-const range = (name, storyObj, config, opts, preferredValue) => {
-	if (typeof opts === 'number') {
-		// opts was omitted, causing the preferredValue to be the last value. Reassignment dipsy-doodle.
-		preferredValue = opts;
-		opts = {};
-	}
-	if (typeof config === 'number' || typeof config === 'string' || config == null) {
-		// Config wasn't set, or was omitted, causing the preferredValue to be the last value. Reassignment dipsy-doodle.
-		preferredValue = config;
+const object = (name, storyObj, config, preferredObject) => {
+	if (typeof config === 'object' || config == null) {
+		// config wasn't set, or was omitted, causing the preferredObject to be the last value. Reassignment dipsy-doodle.
+		preferredObject = config;
 		config = {};
 	}
 
@@ -30,11 +25,10 @@ const range = (name, storyObj, config, opts, preferredValue) => {
 		config.defaultProps = {};
 	}
 
-	storyObj.args[name] = preferredValue != null ? preferredValue : config.defaultProps[name];
+	storyObj.args[name] = preferredObject || config.defaultProps[name];
 	storyObj.argTypes[name] = {
 		control: {
-			type: 'range',
-			...opts
+			type: 'object'
 		},
 		table: {
 			category: config.groupId
@@ -42,5 +36,5 @@ const range = (name, storyObj, config, opts, preferredValue) => {
 	};
 };
 
-export default range;
-export {range};
+export default object;
+export {object};

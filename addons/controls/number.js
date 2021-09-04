@@ -15,6 +15,11 @@ const number = (name, storyObj, config, preferredValue) => {
 		storyObj.argTypes = {};
 	}
 
+	// If there's no group ID but there is a display name, use that for the group ID
+	if (config.displayName && !config.groupId) {
+		config.groupId = config.displayName;
+	}
+
 	// If there is no `defaultProps` object on the config object
 	if (!config.defaultProps) {
 		config.defaultProps = {};
@@ -24,6 +29,9 @@ const number = (name, storyObj, config, preferredValue) => {
 	storyObj.argTypes[name] = {
 		control: {
 			type: 'number'
+		},
+		table: {
+			category: config.groupId
 		}
 	};
 };

@@ -7,6 +7,7 @@
 export * from './controls';
 export * from './boolean';
 export * from './number';
+export * from './object';
 export * from './range';
 export * from './select';
 export * from './text';
