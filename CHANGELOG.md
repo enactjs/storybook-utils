@@ -1,6 +1,6 @@
 ## unreleased
 
-* Adds `export-namespace-from` Babel plugin.
+* Added `export-namespace-from` Babel plugin.
 
 ## 4.0.2 (August 17, 2021)
 
