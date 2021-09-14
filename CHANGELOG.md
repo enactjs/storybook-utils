@@ -2,6 +2,10 @@
 
 * Replaced `@storybook/addon-knobs` with `@storybook/addon-controls` for the local knobs and `@storybook/addon-toolbars` for the global knobs.
 
+## 4.0.3 (September 10, 2021)
+
+* Added `export-namespace-from` Babel plugin.
+
 ## 4.0.2 (August 17, 2021)
 
 * Removed some Babel plugins which were already included in the recent `@babel/preset-env`.
