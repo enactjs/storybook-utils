@@ -1,3 +1,17 @@
+/* eslint-disable no-shadow */
+/*
+ * `number` is used for `number` type control, but instead a `config` object is passed in to
+ * determine the default value and possibly other future things!
+ *
+ * The config object has a `defaultProps` key which has keys that correlate to the `name` argument.
+ *
+ * Arguments:
+ * * name - control/property name string
+ * * storyObj - story object that this control would be attached with
+ * * config - config object with at least a `defaultProps` key containing a map of props and their default values
+ * * preferredValue - (optional) a sample-specific initially selected value
+ */
+
 const number = (name, storyObj, config, preferredValue) => {
 	if (typeof config === 'number' || typeof config === 'string' || config == null) {
 		// Config wasn't set, or was omitted, causing the preferredValue to be the last value. Reassignment dipsy-doodle.

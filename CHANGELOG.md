@@ -1,6 +1,6 @@
-### Changed
+## unreleased
 
-* Replace `@storybook/addon-knobs` with `@storybook/addon-controls`, `@storybook/addon-toolbars`.
+* Replaced `@storybook/addon-knobs` with `@storybook/addon-controls` for the local knobs and `@storybook/addon-toolbars` for the global knobs.
 
 ## 4.0.2 (August 17, 2021)
 

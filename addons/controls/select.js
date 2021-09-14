@@ -1,3 +1,19 @@
+/* eslint-disable no-shadow */
+/*
+ * `select` is used for `select` type control, but instead a `config` object is passed in to
+ * determine the default value and possibly other future things!
+ *
+ * The config object has a `defaultProps` key which is an object with keys that correlate to the
+ * `name` argument.
+ *
+ * Arguments:
+ * * name - control/property name string
+ * * storyObj - story object that this control would be attached with
+ * * items - collection of selectable values, array or object/hash
+ * * config - config object with at least a `defaultProps` key containing a map of props and their default values
+ * * selectedValue - (optional) a sample-specific initially selected value
+ */
+
 const select = (name, storyObj, items, config, selectedValue) => {
 	const defaultString = ' (Default)';
 	const labels = {};
