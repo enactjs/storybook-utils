@@ -1,3 +1,5 @@
+import nullify from '../../nullify';
+
 /* eslint-disable no-shadow */
 /*
  * `select` is used for `select` type control, but instead a `config` object is passed in to
@@ -45,22 +47,22 @@ const select = (name, storyObj, items, config, selectedValue) => {
 	}
 
 	const defaultAppender = (key, label = key) => {
-		return (key || ' ') + (config.defaultProps[name] === label ? defaultString : '');
+		return (key || 'undefined') + (config.defaultProps[name] === label ? defaultString : '');
 	};
 
 	if (items instanceof Array) {
 		// An array of items
 		items.forEach(item => {
-			labels[defaultAppender(item)] = item;
+			labels[defaultAppender(item)] = nullify(item);
 		});
 	} else {
 		// Items is an object
 		for (const item in items) {
-			labels[defaultAppender(item, items[item])] = items[item];
+			labels[defaultAppender(item, items[item])] = nullify(items[item]);
 		}
 	}
 
-	storyObj.args[name] = selectedValue != null ? selectedValue : config.defaultProps[name];
+	storyObj.args[name] = nullify(selectedValue != null ? selectedValue : config.defaultProps[name]);
 	storyObj.argTypes[name] = {
 		options: labels,
 		control: {

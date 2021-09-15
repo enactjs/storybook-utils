@@ -1,7 +1,10 @@
+import nullify from '../../nullify';
+
 /* eslint-disable no-shadow */
 /*
  * `text` is used for `text` type control, but instead a `config` object is passed in to
- * determine the default value and possibly other future things!
+ * determine the default value and possibly other future things! Values are automatically
+ * nullified if they're blank (empty strings).
  *
  * The config object has a `defaultProps` key which is an object with keys that correlate to the
  * `name` argument.
@@ -40,7 +43,7 @@ const text = (name, storyObj, config, preferredValue) => {
 		config.defaultProps = {};
 	}
 
-	storyObj.args[name] = preferredValue != null ? preferredValue : config.defaultProps[name];
+	storyObj.args[name] = nullify(preferredValue != null ? preferredValue : config.defaultProps[name]);
 	storyObj.argTypes[name] = {
 		control: {
 			type: 'text'

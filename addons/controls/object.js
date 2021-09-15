@@ -1,7 +1,10 @@
+import nullify from '../../nullify';
+
 /* eslint-disable no-shadow */
 /*
  * `object` is used for `object` type control, but instead a `config` object is passed in to
- * determine the default value and possibly other future things!
+ * determine the default value and possibly other future things! Values are automatically
+ * nullified if they're blank (empty strings).
  *
  * The config object has a `defaultProps` key which is an object with keys that correlate to the
  * `name` argument.
@@ -40,7 +43,7 @@ const object = (name, storyObj, config, preferredObject) => {
 		config.defaultProps = {};
 	}
 
-	storyObj.args[name] = preferredObject || config.defaultProps[name];
+	storyObj.args[name] = nullify(preferredObject || config.defaultProps[name]);
 	storyObj.argTypes[name] = {
 		control: {
 			type: 'object'
