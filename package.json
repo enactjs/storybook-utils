@@ -50,8 +50,8 @@
     "react-dev-utils": "^11.0.1"
   },
   "devDependencies": {
-    "@storybook/react": "6.3.8",
-    "@storybook/source-loader": "6.3.8",
+    "@storybook/react": "6.2.9",
+    "@storybook/source-loader": "6.2.9",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.15.0",
