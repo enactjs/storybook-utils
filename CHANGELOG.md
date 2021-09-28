@@ -1,4 +1,4 @@
-## unreleased 
+## 4.0.4 (September 28, 2021)
 
 * Added `sanitize.css` module for supporting `postcss-normalize`.
 
