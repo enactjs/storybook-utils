@@ -1,3 +1,7 @@
+## 3.0.1 (September 29, 2021)
+
+* Added `sanitize.css` dependency.
+
 ## 3.0.0 (February 16, 2021)
 
 * Updated dependencies including React17
