@@ -24,10 +24,8 @@ module.exports = function (config, mode, dirname) {
 			{
 				loader: require.resolve('postcss-loader'),
 				options: {
-					ident: 'postcss',
-					sourceMap: shouldUseSourceMap,
-					plugins: () =>
-						[
+					postcssOptions: {
+						plugins: [
 							require('postcss-flexbugs-fixes'),
 							require('postcss-global-import'),
 							require('postcss-preset-env')({
@@ -41,6 +39,8 @@ module.exports = function (config, mode, dirname) {
 							require('postcss-normalize')(),
 							app.ri && require('postcss-resolution-independence')(app.ri)
 						].filter(Boolean)
+					},
+					sourceMap: shouldUseSourceMap
 				}
 			}
 		];
