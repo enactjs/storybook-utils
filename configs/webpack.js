@@ -40,7 +40,7 @@ module.exports = function (config, mode, dirname) {
 							app.ri && require('postcss-resolution-independence')(app.ri)
 						].filter(Boolean)
 					},
-					sourceMap: shouldUseSourceMap,
+					sourceMap: shouldUseSourceMap
 				}
 			}
 		];
