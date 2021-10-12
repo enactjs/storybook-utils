@@ -1,3 +1,8 @@
+## 4.0.5 (October 12, 2021)
+
+* Removed `sanitize.css` dependency.
+* Updated `postcss` related dependencies including `postcss-normalize` 10.0.1.
+
 ## 4.0.4 (September 28, 2021)
 
 * Added `sanitize.css` module for supporting `postcss-normalize`.
