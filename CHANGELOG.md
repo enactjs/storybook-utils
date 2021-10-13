@@ -1,4 +1,4 @@
-## unrelease
+## 3.0.2 (October 13, 2021)
 
 * Removed `sanitize.css` dependency.
 * Updated `postcss` related dependencies including `postcss-normalize` 10.0.1.
