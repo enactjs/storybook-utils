@@ -1,8 +1,11 @@
 ## unreleased
 
+* Replaced `@storybook/addon-knobs` with `@storybook/addon-controls` for the local knobs and `@storybook/addon-toolbars` for the global knobs.
+
+## 4.0.5 (October 12, 2021)
+
 * Removed `sanitize.css` dependency.
 * Updated `postcss` related dependencies including `postcss-normalize` 10.0.1.
-* Replaced `@storybook/addon-knobs` with `@storybook/addon-controls` for the local knobs and `@storybook/addon-toolbars` for the global knobs.
 
 ## 4.0.4 (September 28, 2021)
 
