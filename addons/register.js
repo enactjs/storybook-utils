@@ -1,3 +1,4 @@
 import './actions/register';
-import './knobs/register';
+import './controls/register';
+import './docs/register';
 import './manager-styles';
