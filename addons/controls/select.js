@@ -47,7 +47,7 @@ const select = (name, storyObj, items, config, selectedValue) => {
 	}
 
 	const defaultAppender = (key, label = key) => {
-		if (typeof key === 'string' || key == null) {
+		if (typeof key === 'undefined' || key == null) {
 			return ' ';
 		}
 
