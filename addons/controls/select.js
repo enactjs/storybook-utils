@@ -47,7 +47,7 @@ const select = (name, storyObj, items, config, selectedValue) => {
 	}
 
 	const defaultAppender = (key, label = key) => {
-		return (key || ' ') + (config.defaultProps[name] === label && key ? defaultString : '');
+		return (key || '') + (config.defaultProps[name] === label && key ? defaultString : '');
 	};
 
 	if (items instanceof Array) {
