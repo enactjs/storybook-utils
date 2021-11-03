@@ -47,7 +47,7 @@ const select = (name, storyObj, items, config, selectedValue) => {
 	}
 
 	const defaultAppender = (key, label = key) => {
-		return (key || '(empty string)') + (config.defaultProps[name] === label ? defaultString : '');
+		return (key || '') + (config.defaultProps[name] === label && key ? defaultString : '');
 	};
 
 	if (items instanceof Array) {
@@ -62,7 +62,9 @@ const select = (name, storyObj, items, config, selectedValue) => {
 		}
 	}
 
-	storyObj.args[name] = defaultAppender(selectedValue != null ? selectedValue : config.defaultProps[name]);
+	const value = nullify(selectedValue != null ? selectedValue : config.defaultProps[name]);
+	storyObj.args[name] = Object.keys(labels).find(key => labels[key] === value);
+
 	storyObj.argTypes[name] = {
 		options: Object.keys(labels),
 		mapping: labels,
