@@ -1,6 +1,6 @@
 {
   "name": "@enact/storybook-utils",
-  "version": "4.0.5",
+  "version": "4.1.0",
   "description": "Helper utilities for using Enact in Storybook projects.",
   "main": "index.js",
   "author": "Jason Robitaille <jason.robitaille@lge.com>",
@@ -33,10 +33,10 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@enact/dev-utils": "^4.0.0",
-    "@storybook/addon-actions": "^6.3.10",
-    "@storybook/addon-controls": "^6.3.10",
-    "@storybook/addon-docs": "^6.3.10",
-    "@storybook/addon-toolbars": "^6.3.10",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-controls": "^6.3.12",
+    "@storybook/addon-docs": "^6.3.12",
+    "@storybook/addon-toolbars": "^6.3.12",
     "babel-plugin-dev-expression": "^0.2.2",
     "less": "^3.13.0",
     "less-loader": "^6.2.0",
@@ -51,8 +51,8 @@
     "react-dev-utils": "^11.0.1"
   },
   "devDependencies": {
-    "@storybook/react": "^6.3.10",
-    "@storybook/source-loader": "^6.3.10",
+    "@storybook/react": "^6.3.12",
+    "@storybook/source-loader": "^6.3.12",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.15.0",
