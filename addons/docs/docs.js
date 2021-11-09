@@ -1,1 +1,1 @@
-export {DocsPage, DocsContainer} from '@storybook/addon-docs/blocks';
+export {DocsPage, DocsContainer} from '@storybook/addon-docs';

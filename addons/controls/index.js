@@ -4,10 +4,10 @@
  * There is no `default` for this file.
  */
 
-export * from './configure';
+export * from './controls';
 export * from './boolean';
-export * from './button';
 export * from './number';
 export * from './object';
+export * from './range';
 export * from './select';
 export * from './text';

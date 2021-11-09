@@ -5,5 +5,5 @@
  */
 
 export * as actions from './actions';
+export * as controls from './controls';
 export * as docs from './docs';
-export * as knobs from './knobs';
