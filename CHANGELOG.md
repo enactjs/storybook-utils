@@ -1,3 +1,7 @@
+## 2.0.1 (November 23, 2021)
+
+* Updated `postcss` related dependencies including `postcss-normalize` 10.0.1.
+
 ## 2.0.0 (August 3, 2020)
 
 * Updated codebase to latest Enact linting standards.
