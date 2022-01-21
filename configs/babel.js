@@ -82,14 +82,10 @@ module.exports = function (api) {
 			// '@babel/plugin-proposal-throw-expressions',
 
 			// Stage 3
-			// require('@babel/plugin-syntax-dynamic-import').default,
-			// [require('@babel/plugin-proposal-class-properties').default, {loose: true}],
+			require('@babel/plugin-syntax-dynamic-import').default,
+			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
 			// '@babel/plugin-syntax-import-meta',
 			// '@babel/plugin-proposal-json-strings'
-
-			// Soon to be included within pre-env; include here until then
-			require('@babel/plugin-proposal-optional-chaining').default,
-			require('@babel/plugin-proposal-nullish-coalescing-operator').default,
 
 			require('babel-plugin-dev-expression'),
 			env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
