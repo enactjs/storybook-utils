@@ -75,16 +75,14 @@ module.exports = function (api) {
 			// '@babel/plugin-proposal-do-expressions',
 
 			// Stage 2
-			// [require('@babel/plugin-proposal-decorators').default, false],
-			require('@babel/plugin-proposal-export-namespace-from').default,
-			// require('@babel/plugin-proposal-numeric-separator').default,
+			[require('@babel/plugin-proposal-decorators').default, false],
 			// '@babel/plugin-proposal-function-sent',
+			require('@babel/plugin-proposal-export-namespace-from').default,
 			// '@babel/plugin-proposal-throw-expressions',
 
 			// Stage 3
-			require('@babel/plugin-syntax-dynamic-import').default,
-			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
 			// '@babel/plugin-syntax-import-meta',
+			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
 			// '@babel/plugin-proposal-json-strings'
 
 			require('babel-plugin-dev-expression'),
