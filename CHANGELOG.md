@@ -1,6 +1,6 @@
 # unreleased
 
-* Added `@babel/plugin-proposal-class-properties` plugin to build sandstone sampler.
+* Added `@babel/plugin-proposal-class-properties` plugin to fix sampler build.
 
 ## 4.1.0 (November 9, 2021)
 
