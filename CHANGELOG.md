@@ -1,3 +1,7 @@
+## unreleased
+
+* Added `@babel/plugin-proposal-class-properties` plugin to fix sampler build.
+
 ## 4.1.0 (November 9, 2021)
 
 * Replaced `@storybook/addon-knobs` with `@storybook/addon-controls` for the local knobs and `@storybook/addon-toolbars` for the global knobs.

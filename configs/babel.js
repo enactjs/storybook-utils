@@ -82,6 +82,7 @@ module.exports = function (api) {
 
 			// Stage 3
 			// '@babel/plugin-syntax-import-meta',
+			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
 			// '@babel/plugin-proposal-json-strings'
 
 			require('babel-plugin-dev-expression'),
