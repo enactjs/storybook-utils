@@ -59,6 +59,14 @@ module.exports = function (config, mode, dirname) {
 			}
 		});
 
+	const getScssStyleLoaders = cssLoaderOptions =>
+		getStyleLoaders(cssLoaderOptions, {
+			loader: require.resolve('sass-loader'),
+			options: {
+				sourceMap: shouldUseSourceMap
+			}
+		});
+
 	// Modify stock Storybook config for Enact-tailored experience
 	config.devtool = shouldUseSourceMap && 'source-map';
 	config.resolve.modules = ['node_modules', path.resolve(app.context, 'node_modules')];
@@ -115,7 +123,16 @@ module.exports = function (config, mode, dirname) {
 			test: /\.less$/,
 			use: getLessStyleLoaders({modules: app.forceCSSModules}),
 			sideEffects: true
-		}
+		},
+		// Adds support for CSS Modules, but using SASS
+		// using the extension .module.scss or .module.sass
+		{
+			test: /\.module\.(scss|sass)$/,
+			use: getScssStyleLoaders({
+				importLoaders: 3,
+				modules: true
+			})
+		},
 	);
 
 	// File-loader catch-all for any remaining unhandled extensions
