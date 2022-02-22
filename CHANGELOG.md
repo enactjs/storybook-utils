@@ -1,3 +1,7 @@
+## unreleased
+
+* Update postcss related modules and remove version pinning
+
 ## 4.1.1 (February 17, 2022)
 
 * Added `@babel/plugin-proposal-class-properties` plugin to fix sampler build.
