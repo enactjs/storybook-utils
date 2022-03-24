@@ -1,3 +1,7 @@
+## unreleased
+
+* Replaced deprecated `babel-eslint` with `@babel/eslint-parser`
+
 ## 4.1.1 (February 17, 2022)
 
 * Added `@babel/plugin-proposal-class-properties` plugin to fix sampler build.
