@@ -6,7 +6,7 @@
 
 export * from './controls';
 export * from './boolean';
-export * from './color'
+export * from './color';
 export * from './number';
 export * from './object';
 export * from './range';
