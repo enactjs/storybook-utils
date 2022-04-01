@@ -2,7 +2,7 @@ module.exports = {
 	env: {
 		node: true
 	},
-	extends: ['enact/strict', 'plugin:prettier/recommended', 'prettier/babel', 'prettier/react'],
+	extends: ['enact/strict', 'plugin:prettier/recommended', 'prettier'],
 	plugins: ['import'],
 	rules: {
 		'react/forbid-foreign-prop-types': 'off', // proptypes not removed in storybook config
