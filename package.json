@@ -54,7 +54,7 @@
     "@storybook/react": "^6.3.12",
     "@storybook/source-loader": "^6.3.12",
     "babel-loader": "^8.2.2",
-    "eslint": "^8.3.0",
+    "eslint": "^8.12.0",
     "eslint-config-enact": "^3.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-babel": "^5.3.1",
