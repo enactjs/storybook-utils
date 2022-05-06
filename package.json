@@ -32,7 +32,7 @@
     "@babel/plugin-transform-react-inline-elements": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
-    "@enact/dev-utils": "^5.0.0-alpha.2 ",
+    "@enact/dev-utils": "^4.1.4",
     "@storybook/addon-actions": "^6.5.0-beta.6",
     "@storybook/addon-controls": "^6.5.0-beta.6",
     "@storybook/addon-docs": "^6.5.0-beta.6",
