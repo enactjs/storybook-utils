@@ -46,7 +46,7 @@
     "postcss-global-import": "^1.0.6",
     "postcss-loader": "^4.2.0",
     "postcss-normalize": "^10.0.1",
-    "postcss-preset-env": "^7.0.2",
+    "postcss-preset-env": "^7.5.0",
     "postcss-resolution-independence": "^1.0.0",
     "react-dev-utils": "^11.0.1"
   },
@@ -54,7 +54,7 @@
     "@storybook/react": "^6.4.22",
     "@storybook/source-loader": "^6.4.22",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.0.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.15.0",
     "eslint-config-enact": "^3.0.0",
     "eslint-config-prettier": "^6.15.0",
