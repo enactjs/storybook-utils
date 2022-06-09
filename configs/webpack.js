@@ -1,6 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const {getCSSModuleLocalIdent: getLocalIdent} = require('react-dev-utils/getCSSModuleLocalIdent');
 const {DefinePlugin} = require('webpack');
 const {optionParser: app, GracefulFsPlugin, ILibPlugin, WebOSMetaPlugin} = require('@enact/dev-utils');
 
@@ -17,26 +17,31 @@ module.exports = function (config, mode, dirname) {
 				loader: require.resolve('css-loader'),
 				options: Object.assign(
 					{importLoaders: preProcessor ? 2 : 1, sourceMap: shouldUseSourceMap},
-					cssLoaderOptions,
-					cssLoaderOptions.modules && {modules: {getLocalIdent: getCSSModuleLocalIdent}}
+					cssLoaderOptions
 				)
 			},
 			{
 				loader: require.resolve('postcss-loader'),
 				options: {
 					postcssOptions: {
+						// Necessary for external CSS imports to work
+						// https://github.com/facebook/create-react-app/issues/2677
+						ident: 'postcss',
 						plugins: [
-							require('postcss-flexbugs-fixes'),
-							require('postcss-global-import'),
-							require('postcss-preset-env')({
-								autoprefixer: {
-									flexbox: 'no-2009',
-									remove: false
-								},
-								stage: 3,
-								features: {'custom-properties': false}
-							}),
-							require('postcss-normalize')(),
+							'postcss-flexbugs-fixes',
+							'postcss-global-import',
+							[
+								'postcss-preset-env',
+								{
+									autoprefixer: {
+										flexbox: 'no-2009',
+										remove: false
+									},
+									stage: 3,
+									features: {'custom-properties': false}
+								}
+							],
+							require('postcss-normalize'),
 							app.ri && require('postcss-resolution-independence')(app.ri)
 						].filter(Boolean)
 					},
@@ -94,13 +99,23 @@ module.exports = function (config, mode, dirname) {
 		},
 		{
 			test: /\.module\.css$/,
-			use: getStyleLoaders({modules: true})
+			use: getStyleLoaders({
+				modules: {
+					getLocalIdent,
+					mode: 'local'
+				}
+			})
 		},
 		{
 			test: /\.css$/,
 			// The `forceCSSModules` Enact build option can be set true to universally apply
 			// modular CSS support.
-			use: getStyleLoaders({modules: app.forceCSSModules}),
+			use: getStyleLoaders({
+				modules: {
+					...(app.forceCSSModules ? {getLocalIdent} : {}),
+					mode: 'icss'
+				}
+			}),
 			// Don't consider CSS imports dead code even if the
 			// containing package claims to have no side effects.
 			// Remove this when webpack adds a warning or an error for this.
@@ -109,22 +124,29 @@ module.exports = function (config, mode, dirname) {
 		},
 		{
 			test: /\.module\.less$/,
-			use: getLessStyleLoaders({modules: true})
+			use: getLessStyleLoaders({
+				modules: {
+					getLocalIdent,
+					mode: 'local'
+				}
+			})
 		},
 		{
 			test: /\.less$/,
-			use: getLessStyleLoaders({modules: app.forceCSSModules}),
+			use: getLessStyleLoaders({
+				modules: {
+					...(app.forceCSSModules ? {getLocalIdent} : {}),
+					mode: 'icss'
+				}
+			}),
 			sideEffects: true
 		}
 	);
 
 	// File-loader catch-all for any remaining unhandled extensions
 	config.module.rules[0].oneOf.push({
-		loader: require.resolve('file-loader'),
 		exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
-		options: {
-			name: '[path][name].[ext]'
-		}
+		type: 'asset/resource'
 	});
 
 	// Run `source-loader` on story files to show their source code
