@@ -32,15 +32,17 @@
     "@babel/plugin-transform-react-inline-elements": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
-    "@enact/dev-utils": "^5.0.0-alpha.3",
+    "@enact/dev-utils": "^5.0.0-rc.1",
     "@storybook/addon-actions": "^6.5.8",
     "@storybook/addon-controls": "^6.5.8",
     "@storybook/addon-docs": "^6.5.8",
     "@storybook/addon-toolbars": "^6.5.8",
     "babel-plugin-dev-expression": "^0.2.3",
+    "css-loader": "^6.7.1",
     "less": "^4.1.2",
     "less-loader": "^8.1.1",
     "mini-css-extract-plugin": "^2.6.0",
+    "node-polyfill-webpack-plugin": "^1.1.4",
     "postcss": "^8.4.12",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-global-import": "^1.0.6",
@@ -65,6 +67,6 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.6.0",
-    "webpack": "5.64.4"
+    "webpack": "^5.64.4"
   }
 }

@@ -1,12 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {getCSSModuleLocalIdent: getLocalIdent} = require('react-dev-utils/getCSSModuleLocalIdent');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+const getLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const {DefinePlugin} = require('webpack');
 const {optionParser: app, GracefulFsPlugin, ILibPlugin, WebOSMetaPlugin} = require('@enact/dev-utils');
 
 module.exports = function (config, mode, dirname) {
 	const isProduction = mode === 'PRODUCTION';
 	const shouldUseSourceMap = (process.env.GENERATE_SOURCEMAP || 'true') !== 'false';
+	const publicPath = '';
 
 	app.setEnactTargetsAsDefault();
 
@@ -66,25 +68,20 @@ module.exports = function (config, mode, dirname) {
 
 	// Modify stock Storybook config for Enact-tailored experience
 	config.devtool = shouldUseSourceMap && 'source-map';
+	config.output = Object.assign({}, config.output, {
+		assetModuleFilename: '[name][ext]'
+	});
 	config.resolve.modules = ['node_modules', path.resolve(app.context, 'node_modules')];
 	config.resolve.alias = Object.assign({}, config.resolve.alias, {
 		// coerce everything to use the ilib installed with the sampler
 		// since it is set as a peer dependency by the enact modules
 		ilib: path.resolve(app.context, 'node_modules/ilib')
 	});
-	config.devServer = {host: '0.0.0.0', port: 8080};
 	config.performance = false;
 
 	// Narrow rules into oneOf and add our custom rules first
 	config.module.rules = [{oneOf: config.module.rules}];
 	config.module.rules[0].oneOf.unshift(
-		{
-			test: /\.(jpe?g|gif|ico|png|svg|woff|ttf|wav|mp3|mp4|m4a|aac)$/,
-			loader: require.resolve('file-loader'),
-			options: {
-				name: '[path][name].[ext]'
-			}
-		},
 		{
 			test: /\.(js|mjs|jsx|ts|tsx)$/,
 			exclude: /node_modules.(?!@enact)/,
@@ -140,14 +137,12 @@ module.exports = function (config, mode, dirname) {
 				}
 			}),
 			sideEffects: true
+		},
+		{
+			exclude: [/^$/, /\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
+			type: 'asset/resource'
 		}
 	);
-
-	// File-loader catch-all for any remaining unhandled extensions
-	config.module.rules[0].oneOf.push({
-		exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
-		type: 'asset/resource'
-	});
 
 	// Run `source-loader` on story files to show their source code
 	// automatically in `DocsPage` or the `Source` doc block.
@@ -168,8 +163,9 @@ module.exports = function (config, mode, dirname) {
 			'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
 			'process.env.PUBLIC_URL': JSON.stringify('.')
 		}),
+		new NodePolyfillPlugin(),
 		new GracefulFsPlugin(),
-		new ILibPlugin(),
+		new ILibPlugin({publicPath}),
 		new WebOSMetaPlugin({path: path.join(dirname, 'webos-meta')})
 	);
 	if (!process.env.INLINE_STYLES) {
