@@ -37,6 +37,8 @@
     "@storybook/addon-controls": "^6.5.0",
     "@storybook/addon-docs": "^6.5.2",
     "@storybook/addon-toolbars": "^6.5.2",
+    "@storybook/test-runner": "^0.3.0",
+    "babel-jest": "^27.5.1",
     "babel-plugin-dev-expression": "^0.2.2",
     "less": "^3.13.0",
     "less-loader": "^6.2.0",
@@ -48,13 +50,20 @@
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.5.0",
     "postcss-resolution-independence": "^1.0.0",
-    "react-dev-utils": "^11.0.1"
+    "react-dev-utils": "^11.0.1",
+    "babel-plugin-dynamic-import-node": "^2.3.3"
+
   },
   "devDependencies": {
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/jest": "^0.0.10",
     "@storybook/react": "^6.5.2",
     "@storybook/source-loader": "^6.5.2",
+    "@storybook/testing-library": "^0.0.13",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
+    "esbuild": "^0.14.47",
+    "esbuild-jest": "^0.5.0",
     "eslint": "^7.15.0",
     "eslint-config-enact": "^3.0.0",
     "eslint-config-prettier": "^6.15.0",
@@ -66,6 +75,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "prettier": "^2.2.1",
     "react": "^18.0.0",
     "webpack": "^4.44.2"
