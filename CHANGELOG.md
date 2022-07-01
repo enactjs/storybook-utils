@@ -1,3 +1,7 @@
+## unreleased
+
+* Updated `eslint` related dependencies
+
 ## 4.2.0 (June 7, 2022)
 
 * Added `color` type control.
