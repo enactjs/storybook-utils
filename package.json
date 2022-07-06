@@ -52,7 +52,6 @@
     "postcss-resolution-independence": "^1.0.0",
     "react-dev-utils": "^11.0.1",
     "babel-plugin-dynamic-import-node": "^2.3.3"
-
   },
   "devDependencies": {
     "@storybook/addon-interactions": "^6.5.9",
