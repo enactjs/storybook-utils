@@ -1,3 +1,7 @@
+## 4.2.0 (June 7, 2022)
+
+* Added `color` type control.
+
 ## 4.1.1 (February 17, 2022)
 
 * Added `@babel/plugin-proposal-class-properties` plugin to fix sampler build.
