@@ -1,4 +1,4 @@
-/** @type {import('@jest/types').Config.InitialOptions} */
+console.log('test43543');
 
 module.exports = {
 	transform: {
