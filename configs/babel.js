@@ -5,8 +5,14 @@
  *  development environment on target platforms.
  */
 
+const path = require('path');
+
 // Check if JSX transform is able
 const hasJsxRuntime = (() => {
+	if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
+		return false;
+	}
+
 	try {
 		require.resolve('react/jsx-runtime');
 		return true;
@@ -15,6 +21,7 @@ const hasJsxRuntime = (() => {
 	}
 })();
 
+console.log('babel');
 module.exports = function (api) {
 	const env = process.env.BABEL_ENV || process.env.NODE_ENV;
 	const es5Standalone = process.env.ES5 && process.env.ES5 !== 'false';
@@ -60,34 +67,35 @@ module.exports = function (api) {
 					// behavior for any plugins that require one.
 					...(!hasJsxRuntime ? {useBuiltIns: true} : {runtime: 'automatic'})
 				}
-			]
-		],
-		plugins: [
-			// Stage 0
-			// '@babel/plugin-proposal-function-bind',
-
-			// Stage 1
-			require('@babel/plugin-proposal-export-default-from').default,
-			// '@babel/plugin-proposal-logical-assignment-operators',
-			// ['@babel/plugin-proposal-optional-chaining', { 'loose': false }],
-			// ['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }],
-			// ['@babel/plugin-proposal-nullish-coalescing-operator', { 'loose': false }],
-			// '@babel/plugin-proposal-do-expressions',
-
-			// Stage 2
-			[require('@babel/plugin-proposal-decorators').default, false],
-			// '@babel/plugin-proposal-function-sent',
-			require('@babel/plugin-proposal-export-namespace-from').default,
-			// '@babel/plugin-proposal-throw-expressions',
-
-			// Stage 3
-			// '@babel/plugin-syntax-import-meta',
-			[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
-			// '@babel/plugin-proposal-json-strings'
-
-			require('babel-plugin-dev-expression'),
-			env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
-			env === 'production' && !es5Standalone && require('@babel/plugin-transform-react-inline-elements').default
-		].filter(Boolean)
+			],
+			['@babel/preset-typescript']
+		]
+		// plugins: [
+		// 	// Stage 0
+		// 	// '@babel/plugin-proposal-function-bind',
+		//
+		// 	// Stage 1
+		// 	require('@babel/plugin-proposal-export-default-from').default,
+		// 	// '@babel/plugin-proposal-logical-assignment-operators',
+		// 	// ['@babel/plugin-proposal-optional-chaining', { 'loose': false }],
+		// 	// ['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }],
+		// 	// ['@babel/plugin-proposal-nullish-coalescing-operator', { 'loose': false }],
+		// 	// '@babel/plugin-proposal-do-expressions',
+		//
+		// 	// Stage 2
+		// 	[require('@babel/plugin-proposal-decorators').default, false],
+		// 	// '@babel/plugin-proposal-function-sent',
+		// 	require('@babel/plugin-proposal-export-namespace-from').default,
+		// 	// '@babel/plugin-proposal-throw-expressions',
+		//
+		// 	// Stage 3
+		// 	// '@babel/plugin-syntax-import-meta',
+		// 	[require('@babel/plugin-proposal-class-properties').default, {loose: true}],
+		// 	// '@babel/plugin-proposal-json-strings'
+		//
+		// 	require('babel-plugin-dev-expression'),
+		// 	env === 'test' && !es5Standalone && require('babel-plugin-dynamic-import-node').default,
+		// 	env === 'production' && !es5Standalone && require('@babel/plugin-transform-react-inline-elements').default
+		// ].filter(Boolean)
 	};
 };
