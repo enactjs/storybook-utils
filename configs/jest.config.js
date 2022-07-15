@@ -1,5 +1,3 @@
-console.log('test43543');
-
 const {getJestConfig} = require('@storybook/test-runner');
 
 const fs = require('fs');
@@ -38,7 +36,6 @@ const globals = {
 // 		watchPathIgnorePatterns: [ 'coverage', '.nyc_output', '.cache' ]
 // }
 
-// console.log(getJestConfig());
 module.exports = {
 	// The default configuration comes from @storybook/test-runner
 	...getJestConfig(),
@@ -49,8 +46,9 @@ module.exports = {
 		'^.+\\.(js|jsx|ts|tsx)$': require.resolve('./babelTransform'),
 		'^.+\\.(css|less|sass|scss)$': require.resolve('./cssTransform.js'),
 		'^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|less|sass|scss|json)$)': require.resolve('./fileTransform'),
-		'^.+\\.stories\\.[jt]sx?$': '@storybook/test-runner/playwright/transform'
-		// '^.+\\.[jt]sx?$': require.resolve('babel-jest'),
+		'^.+\\.(js|jsx|ts|tsx)$': '@storybook/test-runner/playwright/transform',
+		'^.+\\.[jt]sx?$': require.resolve('babel-jest'),
+		// '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform'
 	},
 	transformIgnorePatterns: [
 		'[/\\\\]node_modules[/\\\\](?!@enact).+\\.(js|jsx|mjs|cjs|ts|tsx)$',
@@ -58,9 +56,10 @@ module.exports = {
 	],
 	moduleNameMapper: {
 		'^.+\\.module\\.(css|less|sass|scss)$': require.resolve('identity-obj-proxy'),
-		// '^@testing-library/jest-dom$': require.resolve('@testing-library/jest-dom'),
-		// '^@testing-library/react$': require.resolve('@testing-library/react'),
-		// '^@testing-library/user-event$': require.resolve('@testing-library/user-event'),
+		// '^.+\\.(css|less|sass|scss)$': require.resolve('identity-obj-proxy'),
+		'^@testing-library/jest-dom$': require.resolve('@testing-library/jest-dom'),
+		'^@testing-library/react$': require.resolve('@testing-library/react'),
+		'^@testing-library/user-event$': require.resolve('@testing-library/user-event'),
 		'^react$': require.resolve('react'),
 		// Backward compatibility for new iLib location with old Enact
 		'^ilib[/](.*)$': path.join(app.context, globals.ILIB_BASE_PATH, '$1'),

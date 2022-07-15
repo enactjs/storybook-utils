@@ -22,6 +22,14 @@ module.exports = function (config, mode, dirname) {
 				)
 			},
 			{
+				loader: 'css-loader',
+				options: {
+					modules: {
+						localIdentName:'[name]__[local]--[hash:base64:5]',
+					},
+				},
+			},
+			{
 				loader: require.resolve('postcss-loader'),
 				options: {
 					postcssOptions: {
