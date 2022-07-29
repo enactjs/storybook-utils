@@ -95,6 +95,12 @@ module.exports = function (config, mode, dirname) {
 			}
 		},
 		{
+			test: /\.(js|mjs|jsx|ts|tsx)$/,
+			resolve: {
+				fullySpecified: false
+			}
+		},
+		{
 			test: /\.module\.css$/,
 			use: getStyleLoaders({
 				modules: {
