@@ -1,1 +1,2 @@
-export {DocsPage, DocsContainer} from '@storybook/addon-docs';
+export {DocsPage} from './components/DocsPage';
+export {DocsContainer} from './components/DocsContainer';
