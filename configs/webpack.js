@@ -98,8 +98,7 @@ module.exports = function (config, mode, dirname) {
 			test: /\.module\.css$/,
 			use: getStyleLoaders({
 				modules: {
-					getLocalIdent,
-					mode: 'local'
+					getLocalIdent
 				}
 			})
 		},
@@ -109,8 +108,7 @@ module.exports = function (config, mode, dirname) {
 			// modular CSS support.
 			use: getStyleLoaders({
 				modules: {
-					...(app.forceCSSModules ? {getLocalIdent} : {}),
-					mode: 'icss'
+					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'})
 				}
 			}),
 			// Don't consider CSS imports dead code even if the
@@ -123,8 +121,7 @@ module.exports = function (config, mode, dirname) {
 			test: /\.module\.less$/,
 			use: getLessStyleLoaders({
 				modules: {
-					getLocalIdent,
-					mode: 'local'
+					getLocalIdent
 				}
 			})
 		},
@@ -132,8 +129,7 @@ module.exports = function (config, mode, dirname) {
 			test: /\.less$/,
 			use: getLessStyleLoaders({
 				modules: {
-					...(app.forceCSSModules ? {getLocalIdent} : {}),
-					mode: 'icss'
+					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'})
 				}
 			}),
 			sideEffects: true
@@ -168,13 +164,28 @@ module.exports = function (config, mode, dirname) {
 		new ILibPlugin({publicPath}),
 		new WebOSMetaPlugin({path: path.join(dirname, 'webos-meta')})
 	);
+
 	if (!process.env.INLINE_STYLES) {
 		config.plugins.push(
 			new MiniCssExtractPlugin({
 				filename: '[name].css',
-				chunkFilename: 'chunk.[name].css'
+				chunkFilename: 'chunk.[name].css',
+				ignoreOrder: true
 			})
 		);
+
+		config.optimization = Object.assign({}, config.optimization, {
+			splitChunks: {
+				cacheGroups: {
+					styles: {
+						name: 'styles',
+						type: 'css/mini-extract',
+						chunks: 'all',
+						enforce: true
+					}
+				}
+			}
+		});
 	}
 
 	return config;
