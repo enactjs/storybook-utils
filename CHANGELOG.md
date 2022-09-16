@@ -1,4 +1,4 @@
-## unreleased
+## 5.0.0 (September 16, 2022)
 
 * Migrated to storybook 6.5 and webpack 5.
 * Updated `eslint` related dependencies.
