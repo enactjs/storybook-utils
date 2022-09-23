@@ -4,7 +4,7 @@ const getBooleanType = name => {
 		defaultValue: 'false',
 		toolbar: {
 			items: ['true', 'false'],
-			showName: true
+			title: true,
 		}
 	};
 };
@@ -20,7 +20,7 @@ const getObjectType = (name, defaultValue, obj) => {
 					title
 				};
 			}),
-			showName: true
+			title: true
 		}
 	};
 };
