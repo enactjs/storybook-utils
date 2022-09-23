@@ -4,7 +4,7 @@ const getBooleanType = name => {
 		defaultValue: 'false',
 		toolbar: {
 			items: ['true', 'false'],
-			title: true,
+			title: true
 		}
 	};
 };
