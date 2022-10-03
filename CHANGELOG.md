@@ -1,3 +1,7 @@
+## Unreleased
+
+* Fixed `showName` warning by changing `title` property to `name` value in the controls addon.
+
 ## 5.0.0 (September 16, 2022)
 
 * Migrated to storybook 6.5 and webpack 5.
