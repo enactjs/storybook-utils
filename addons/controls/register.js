@@ -1,1 +1,1 @@
-import '@storybook/addon-controls/register';
+import '@storybook/addon-controls/manager';

@@ -1,1 +1,1 @@
-import '@storybook/addon-toolbars/register';
+import '@storybook/addon-toolbars/manager';
