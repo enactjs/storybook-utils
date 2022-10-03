@@ -1,6 +1,7 @@
 ## Unreleased
 
 * Fixed `showName` warning by changing `title` property to `name` value in the controls addon.
+* Changed addons import module from `register` to `manager` to all addons.
 
 ## 5.0.0 (September 16, 2022)
 
