@@ -1,4 +1,3 @@
-/* eslint-disable no-shadow */
 /*
  * `boolean` is used for `boolean` type control, but instead a `config` object is passed
  * in to determine the default value and possibly other future things!

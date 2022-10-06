@@ -1,6 +1,5 @@
 import nullify from '../../nullify';
 
-/* eslint-disable no-shadow */
 /*
  * `object` is used for `object` type control, but instead a `config` object is passed in to
  * determine the default value and possibly other future things! Values are automatically
