@@ -1,5 +1,6 @@
 ## Unreleased
 
+* Updated `babel.js` to use `babel-preset-enact-app` that supporting own enact app config.
 * Replaced deprecated `register` with `manager` for addons.
 * Fixed `showName` warning by changing `title` property to `name` value in the controls addon.
 

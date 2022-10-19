@@ -2308,7 +2308,7 @@
     },
     "node_modules/@enact/dev-utils": {
       "version": "5.0.2",
-      "resolved": "git+ssh://git@github.com/enactjs/dev-utils.git#a7002032de36191c39b11c136d3628fa728b09d4",
+      "resolved": "git+ssh://git@github.com/enactjs/dev-utils.git#bc991926378ea98f97c48ac23e1f8a2ba697377a",
       "license": "Apache-2.0",
       "dependencies": {
         "browserslist": "4.21.1",
@@ -9273,7 +9273,7 @@
     },
     "node_modules/babel-preset-enact-app": {
       "version": "1.0.0",
-      "resolved": "git+ssh://git@github.com/enactjs/babel-preset-enact-app.git#9fae0db4c72e4e0b54065cf7e3ce7133195f2af5",
+      "resolved": "git+ssh://git@github.com/enactjs/babel-preset-enact-app.git#14ce6380a53c83f82c891c0cdb1ef67a6aadb87d",
       "license": "Apache-2.0",
       "dependencies": {
         "@babel/plugin-proposal-decorators": "^7.16.4",
@@ -11952,7 +11952,7 @@
     },
     "node_modules/eslint-config-enact": {
       "version": "4.1.2",
-      "resolved": "git+ssh://git@github.com/enactjs/eslint-config-enact.git#9b59ab2b46b7a95e1dfe5365e378552c9171531b",
+      "resolved": "git+ssh://git@github.com/enactjs/eslint-config-enact.git#1c3a2d02658ffed38ecf6ad1e8923b6f5c3e7919",
       "dev": true,
       "license": "Apache-2.0",
       "dependencies": {
@@ -11962,7 +11962,7 @@
         "@typescript-eslint/eslint-plugin": "^5.35.1",
         "@typescript-eslint/parser": "^5.35.1",
         "babel-preset-enact-app": "github:enactjs/babel-preset-enact-app#feature/WRO-697",
-        "eslint": "^8.12.0",
+        "eslint": "^8.23.0",
         "eslint-plugin-enact": "^1.0.1",
         "eslint-plugin-jest": "^26.8.7",
         "eslint-plugin-jsx-a11y": "^6.6.1",
@@ -26954,7 +26954,7 @@
       "dev": true
     },
     "@enact/dev-utils": {
-      "version": "git+ssh://git@github.com/enactjs/dev-utils.git#a7002032de36191c39b11c136d3628fa728b09d4",
+      "version": "git+ssh://git@github.com/enactjs/dev-utils.git#bc991926378ea98f97c48ac23e1f8a2ba697377a",
       "from": "@enact/dev-utils@github:enactjs/dev-utils#feature/WRO-697",
       "requires": {
         "browserslist": "4.21.1",
@@ -32418,7 +32418,7 @@
       "integrity": "sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA=="
     },
     "babel-preset-enact-app": {
-      "version": "git+ssh://git@github.com/enactjs/babel-preset-enact-app.git#9fae0db4c72e4e0b54065cf7e3ce7133195f2af5",
+      "version": "git+ssh://git@github.com/enactjs/babel-preset-enact-app.git#14ce6380a53c83f82c891c0cdb1ef67a6aadb87d",
       "from": "babel-preset-enact-app@github:enactjs/babel-preset-enact-app#feature/WRO-697",
       "requires": {
         "@babel/plugin-proposal-decorators": "^7.16.4",
@@ -34615,7 +34615,7 @@
       }
     },
     "eslint-config-enact": {
-      "version": "git+ssh://git@github.com/enactjs/eslint-config-enact.git#9b59ab2b46b7a95e1dfe5365e378552c9171531b",
+      "version": "git+ssh://git@github.com/enactjs/eslint-config-enact.git#1c3a2d02658ffed38ecf6ad1e8923b6f5c3e7919",
       "dev": true,
       "from": "eslint-config-enact@github:enactjs/eslint-config-enact#feature/WRO-697",
       "requires": {
@@ -34625,7 +34625,7 @@
         "@typescript-eslint/eslint-plugin": "^5.35.1",
         "@typescript-eslint/parser": "^5.35.1",
         "babel-preset-enact-app": "github:enactjs/babel-preset-enact-app#feature/WRO-697",
-        "eslint": "^8.12.0",
+        "eslint": "^8.23.0",
         "eslint-plugin-enact": "^1.0.1",
         "eslint-plugin-jest": "^26.8.7",
         "eslint-plugin-jsx-a11y": "^6.6.1",
