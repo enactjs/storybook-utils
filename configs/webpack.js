@@ -135,7 +135,7 @@ module.exports = function (config, mode, dirname) {
 			sideEffects: true
 		},
 		{
-			exclude: [/^$/, /\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
+			exclude: [/^$/, /\.(js|mjs|cjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
 			type: 'asset/resource'
 		}
 	);
