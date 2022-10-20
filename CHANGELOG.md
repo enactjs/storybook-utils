@@ -1,6 +1,6 @@
 ## Unreleased
 
-* Fixed not loading stories without `storyStoreV7` option by adding `cjs` file to be excluded from `file-loader`.
+* Fixed not loading stories without `storyStoreV7` option by making `cjs` file not be treated as an asset or resource.
 * Replaced deprecated `register` with `manager` for addons.
 * Fixed `showName` warning by changing `title` property to `name` value in the controls addon.
 
