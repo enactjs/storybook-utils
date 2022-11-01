@@ -1,5 +1,6 @@
 ## Unreleased
 
+* Added `Primary, Stories, Title` to the `@storybook/addon-docs` export for customizing docs page.
 * Fixed not loading stories without `storyStoreV7` option by making `cjs` file not be treated as an asset or resource.
 * Replaced deprecated `register` with `manager` for addons.
 * Fixed `showName` warning by changing `title` property to `name` value in the controls addon.
