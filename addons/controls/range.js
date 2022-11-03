@@ -1,4 +1,3 @@
-/* eslint-disable no-shadow */
 /*
  * `range` is used for `range` type control, but instead a `config` object is passed in to
  * determine the default value and possibly other future things!
