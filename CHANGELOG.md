@@ -1,5 +1,6 @@
-## Unreleased
+## 5.0.1 (November 3, 2022)
 
+* Added `Primary`, `Stories`, and `Title` to the docs addon exports for customizing the docs page.
 * Fixed not loading stories without `storyStoreV7` option by making `cjs` file not be treated as an asset or resource.
 * Replaced deprecated `register` with `manager` for addons.
 * Fixed `showName` warning by changing `title` property to `name` value in the controls addon.
