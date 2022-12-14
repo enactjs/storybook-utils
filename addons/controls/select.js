@@ -49,15 +49,19 @@ const select = (name, storyObj, items, config, selectedValue) => {
 		return (key || '') + (config.defaultProps[name] === label && key ? defaultString : '');
 	};
 
+	const replaceNullString = (key) => {
+		return key === '' ? 'undefined' : key;
+	};
+
 	if (items instanceof Array) {
 		// An array of items
 		items.forEach(item => {
-			labels[defaultAppender(item)] = nullify(item);
+			labels[replaceNullString(defaultAppender(item))] = nullify(item);
 		});
 	} else {
 		// Items is an object
 		for (const item in items) {
-			labels[defaultAppender(item, items[item])] = nullify(items[item]);
+			labels[replaceNullString(defaultAppender(item))] = nullify(items[item]);
 		}
 	}
 
