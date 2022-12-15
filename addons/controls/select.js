@@ -49,7 +49,7 @@ const select = (name, storyObj, items, config, selectedValue) => {
 		return (key || '') + (config.defaultProps[name] === label && key ? defaultString : '');
 	};
 
-	const replaceNullString = (key) => {
+	const replaceNullString = key => {
 		return key === '' ? 'undefined' : key;
 	};
 
