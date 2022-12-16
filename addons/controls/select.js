@@ -61,7 +61,7 @@ const select = (name, storyObj, items, config, selectedValue) => {
 	} else {
 		// Items is an object
 		for (const item in items) {
-			labels[replaceNullString(defaultAppender(item))] = nullify(items[item]);
+			labels[replaceNullString(defaultAppender(item, items[item]))] = nullify(items[item]);
 		}
 	}
 
