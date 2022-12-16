@@ -1,4 +1,4 @@
-## Unreleased
+## 5.0.2 (December 16, 2022)
 
 * Fixed not showing controls of some stories without `storyStoreV7` option.
 
