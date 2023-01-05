@@ -1,6 +1,6 @@
 ## Unreleased
 
-* Updated `babel.js` to use `babel-preset-enact-app` that supporting own enact app config.
+* Updated `babel.js` to use `babel-preset-enact` that supporting own enact app config.
 
 ## 5.0.2 (December 16, 2022)
 
