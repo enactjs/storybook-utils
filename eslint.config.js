@@ -1,4 +1,4 @@
-const enactPlugin = require('eslint-plugin-enact/strict');
+const enactPlugin = require('eslint-plugin-enact/configs/strict');
 const importPlugin = require('eslint-plugin-import');
 const prettierPlugin = require('eslint-plugin-prettier');
 const prettierRecommended = require('eslint-plugin-prettier/configs/recommended');
