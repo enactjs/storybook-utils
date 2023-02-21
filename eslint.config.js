@@ -15,18 +15,18 @@ module.exports = [
 		},
 		plugins: {
 			enactPlugin,
-			importPlugin,
+			import: importPlugin,
 			prettierPlugin
 		},
 		rules: {
 			'react/forbid-foreign-prop-types': 'off', // proptypes not removed in storybook config
-			'importPlugin/no-unresolved': ['error', {commonjs: true, caseSensitive: true}],
-			'importPlugin/named': 'error',
-			'importPlugin/first': 'warn',
-			'importPlugin/no-duplicates': 'error',
-			'importPlugin/extensions': ['warn', 'always', {js: 'never', json: 'always'}],
-			'importPlugin/newline-after-import': 'warn',
-			'importPlugin/order': [
+			'import/no-unresolved': ['error', {commonjs: true, caseSensitive: true}],
+			'import/named': 'error',
+			'import/first': 'warn',
+			'import/no-duplicates': 'error',
+			'import/extensions': ['warn', 'always', {js: 'never', json: 'always'}],
+			'import/newline-after-import': 'warn',
+			'import/order': [
 				'warn',
 				{
 					'newlines-between': 'never',
