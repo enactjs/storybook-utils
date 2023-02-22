@@ -1,6 +1,7 @@
-const enactPlugin = require('eslint-plugin-enact');
+const enactConfig = require('eslint-config-enact/strict');
 const importPlugin = require('eslint-plugin-import');
 const prettierPlugin = require('eslint-plugin-prettier');
+const prettierRecommended = require('eslint-config-prettier');
 
 module.exports = [
 	{
@@ -9,14 +10,15 @@ module.exports = [
 			sourceType: 'module',
 			parserOptions: {
 				ecmaFeatures: {
-					jsx: true,
-				},
+					jsx: true
+				}
 			}
 		},
 		plugins: {
-			enactPlugin,
+			enactConfig,
 			import: importPlugin,
-			prettierPlugin
+			prettierPlugin,
+			prettierRecommended
 		},
 		rules: {
 			'react/forbid-foreign-prop-types': 'off', // proptypes not removed in storybook config
@@ -32,7 +34,10 @@ module.exports = [
 					'newlines-between': 'never',
 					groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
 				}
-			]
+			],
+			'prettierPlugin/prettier': 'error',
+			'prettierRecommended/arrow-body-style': 'off',
+			'prettierRecommended/prefer-arrow-callback': 'off'
 		}
 	}
 ];
