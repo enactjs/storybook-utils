@@ -1,6 +1,7 @@
-## 5.0.4 (April 4, 2023)
+## 5.0.4 (April 6, 2023)
 
 * Updated `eslint-plugin-react` version to `^7.32.2`.
+* Updated dependencies.
 
 ## 5.0.3 (February 14, 2023)
 

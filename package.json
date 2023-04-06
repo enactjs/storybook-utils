@@ -26,7 +26,7 @@
     "arrowParens": "avoid"
   },
   "dependencies": {
-    "@enact/dev-utils": "github:enactjs/dev-utils#release/5.1.2",
+    "@enact/dev-utils": "^5.1.2",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-controls": "^6.5.16",
     "@storybook/addon-docs": "^6.5.16",
@@ -52,9 +52,9 @@
     "@storybook/source-loader": "^6.5.16",
     "babel-loader": "^8.2.5",
     "eslint": "^8.32.0",
-    "eslint-config-enact": "github:enactjs/eslint-config-enact#release/4.1.4",
+    "eslint-config-enact": "^4.1.4",
     "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-enact": "github:enactjs/eslint-plugin-enact#release/1.0.2",
+    "eslint-plugin-enact": "^1.0.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
