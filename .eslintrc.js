@@ -3,6 +3,13 @@ module.exports = {
 		node: true
 	},
 	extends: ['enact/strict', 'plugin:prettier/recommended', 'prettier'],
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true
+		},
+		ecmaVersion: 'latest',
+		sourceType: 'module'
+	},
 	plugins: ['import'],
 	rules: {
 		'react/forbid-foreign-prop-types': 'off', // proptypes not removed in storybook config
