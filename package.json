@@ -44,12 +44,15 @@
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.8.3",
     "postcss-resolution-independence": "^1.1.0",
-    "react-dev-utils": "^12.0.1"
+    "react-dev-utils": "^12.0.1",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@babel/eslint-plugin": "^7.19.1",
+    "@storybook/react": "7.0.6",
     "@storybook/react-webpack5": "^7.0.6",
     "@storybook/source-loader": "^7.0.6",
+    "@types/uuid": "^9.0.1",
     "babel-loader": "^8.2.5",
     "eslint": "^8.32.0",
     "eslint-config-enact": "^4.1.4",
@@ -64,6 +67,6 @@
     "prettier": "^2.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "webpack": "^5.75.0"
+    "webpack": "^5.80.0"
   }
 }
