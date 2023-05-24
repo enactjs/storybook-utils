@@ -1,6 +1,6 @@
 ## unreleased
 
-* Updated `babel-loader` dependency version to `^9.1.2`.
+* Updated `babel-loader` version to `^9.1.2`.
 
 ## 5.0.4 (April 7, 2023)
 
