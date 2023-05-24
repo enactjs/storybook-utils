@@ -7,7 +7,7 @@
   "repository": "https://github.com/enactjs/storybook-utils/",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=10.16.0"
+    "node": ">=14.15.0"
   },
   "publishConfig": {
     "access": "public"
