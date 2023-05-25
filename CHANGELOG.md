@@ -1,6 +1,7 @@
 ## unreleased
 
 * Updated `less-loader` version to `^11.1.0`.
+* Updated the minimum version of Node to `14.15.0`.
 
 ## 5.0.4 (April 7, 2023)
 
