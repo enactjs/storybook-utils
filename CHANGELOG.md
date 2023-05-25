@@ -1,6 +1,7 @@
 ## unreleased
 
 * Updated `babel-loader` version to `^9.1.2`.
+* Updated the minimum version of Node to `14.15.0`.
 
 ## 5.0.4 (April 7, 2023)
 
