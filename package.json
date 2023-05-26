@@ -50,7 +50,7 @@
     "@babel/eslint-plugin": "^7.19.1",
     "@storybook/react": "^6.5.16",
     "@storybook/source-loader": "^6.5.16",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.1.2",
     "eslint": "^8.37.0",
     "eslint-config-enact": "^4.1.4",
     "eslint-config-prettier": "^8.8.0",
