@@ -4,6 +4,7 @@ node_js:
     - node
 sudo: false
 install:
+    - npm cache verify
     - npm config set prefer-offline false
     - npm install
 
