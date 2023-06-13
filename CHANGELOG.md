@@ -1,5 +1,8 @@
 ## unreleased
 
+* Updated `@enact/dev-utils` version to `^6.0.0`.
+* Updated `postcss-loader` version to `^7.3.3`.
+* Updated `postcss-preset-env` version to `^8.4.2`.
 * Updated `less-loader` version to `^11.1.0`.
 * Updated `babel-loader` version to `^9.1.2`.
 * Updated the minimum version of Node to `14.15.0`.
