@@ -1,11 +1,9 @@
 ## unreleased
 
-* Updated `@enact/dev-utils` version to `^6.0.0`.
-* Updated `postcss-loader` version to `^7.3.3`.
-* Updated `postcss-preset-env` version to `^8.4.2`.
+* Updated `@enact/dev-utils`, `postcss-loader` and `postcss-preset-env` to the latest version.
+* Updated the minimum version of Node to `14.15.0` and dropped the support for Node 12 and 17.
 * Updated `less-loader` version to `^11.1.0`.
 * Updated `babel-loader` version to `^9.1.2`.
-* Updated the minimum version of Node to `14.15.0`.
 
 ## 5.0.4 (April 7, 2023)
 
