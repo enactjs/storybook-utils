@@ -32,7 +32,6 @@
         "@babel/eslint-plugin": "^7.19.1",
         "@storybook/react": "^7.0.23",
         "@storybook/react-webpack5": "^7.0.23",
-        "@storybook/source-loader": "^7.0.23",
         "babel-loader": "^9.1.2",
         "eslint": "^8.37.0",
         "eslint-config-enact": "^4.1.4",
@@ -22475,27 +22474,6 @@
         "@storybook/client-logger": "7.0.23",
         "memoizerific": "^1.11.3",
         "qs": "^6.10.0"
-      },
-      "funding": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/storybook"
-      },
-      "peerDependencies": {
-        "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
-      }
-    },
-    "node_modules/@storybook/source-loader": {
-      "version": "7.0.23",
-      "resolved": "https://registry.npmjs.org/@storybook/source-loader/-/source-loader-7.0.23.tgz",
-      "integrity": "sha512-9gyIBzHV4E4+v4VEBUCTo74E3kZThKA5hzJJZhrgRlG25z1itaeQyP+GxAj47/uGk2NxUhaFmxT+Zr1Zg4uxKw==",
-      "dev": true,
-      "dependencies": {
-        "@storybook/csf": "^0.1.0",
-        "@storybook/types": "7.0.23",
-        "estraverse": "^5.2.0",
-        "lodash": "^4.17.21",
-        "prettier": "^2.8.0"
       },
       "funding": {
         "type": "opencollective",
