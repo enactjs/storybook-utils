@@ -29,7 +29,6 @@
     "@enact/dev-utils": "^6.0.0",
     "@storybook/addon-actions": "^7.0.23",
     "@storybook/addon-controls": "^7.0.23",
-    "@storybook/addon-docs": "^7.0.23",
     "@storybook/addon-toolbars": "^7.0.23",
     "babel-preset-enact": "^0.1.1",
     "css-loader": "^6.7.3",
