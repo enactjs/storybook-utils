@@ -1,3 +1,11 @@
+## 5.1.0 (June 23, 2023)
+
+* Updated `@enact/dev-utils`, `postcss-loader` and `postcss-preset-env` to the latest version.
+* Updated to stop support for nodes 12 and 17.
+* Updated `less-loader` version to `^11.1.0`.
+* Updated `babel-loader` version to `^9.1.2`.
+* Updated the minimum version of Node to `14.15.0`.
+
 ## 5.0.4 (April 7, 2023)
 
 * Updated `eslint-plugin-react` version to `^7.32.2`.
