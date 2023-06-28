@@ -1,4 +1,4 @@
-## unreleased
+## 5.1.0 (June 23, 2023)
 
 * Updated `@enact/dev-utils`, `postcss-loader` and `postcss-preset-env` to the latest version.
 * Updated to stop support for nodes 12 and 17.
