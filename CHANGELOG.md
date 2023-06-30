@@ -1,3 +1,7 @@
+## 5.1.1 (June 30, 2023)
+
+* Updated minor dependencies.
+
 ## 5.1.0 (June 23, 2023)
 
 * Updated `@enact/dev-utils`, `postcss-loader` and `postcss-preset-env` to the latest version.
