@@ -66,6 +66,14 @@ module.exports = function (config, mode, dirname) {
 			}
 		});
 
+	const getScssStyleLoaders = cssLoaderOptions =>
+		getStyleLoaders(cssLoaderOptions, {
+			loader: require.resolve('sass-loader'),
+			options: {
+				sourceMap: shouldUseSourceMap
+			}
+		});
+
 	// Modify stock Storybook config for Enact-tailored experience
 	config.devtool = shouldUseSourceMap && 'source-map';
 	config.output = Object.assign({}, config.output, {
@@ -133,6 +141,15 @@ module.exports = function (config, mode, dirname) {
 				}
 			}),
 			sideEffects: true
+		},
+		// Adds support for CSS Modules, but using SASS
+		// using the extension .module.scss or .module.sass
+		{
+			test: /\.module\.(scss|sass)$/,
+			use: getScssStyleLoaders({
+				importLoaders: 3,
+				modules: true
+			})
 		},
 		{
 			exclude: [/^$/, /\.(js|mjs|cjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
