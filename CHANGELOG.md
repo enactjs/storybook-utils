@@ -1,3 +1,9 @@
+## unreleased
+
+* Migrated to storybook 7.
+* Updated the minimum version of Node to `16.10.0`.
+* Removed custom docs addon and `@storybook/addon-docs` because storybook 7 doesn't allow customization of `@storybook/addon-docs`
+
 ## 5.1.0 (June 23, 2023)
 
 * Updated `@enact/dev-utils`, `postcss-loader` and `postcss-preset-env` to the latest version.
