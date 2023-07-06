@@ -148,7 +148,9 @@ module.exports = function (config, mode, dirname) {
 			test: /\.module\.(scss|sass)$/,
 			use: getScssStyleLoaders({
 				importLoaders: 3,
-				modules: true
+				modules: {
+					getLocalIdent
+				}
 			})
 		},
 		{
