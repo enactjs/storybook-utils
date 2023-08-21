@@ -3,6 +3,7 @@
 * Migrated to storybook 7.
 * Updated the minimum version of Node to `16.10.0`.
 * Removed custom docs addon and `@storybook/addon-docs` dependency because storybook 7 doesn't allow customization of `@storybook/addon-docs`.
+* Updated `prettier` version to `^3.0.1` and `eslint-plugin-prettier` version to `^5.0.0`.
 
 ## 5.1.0 (June 23, 2023)
 
