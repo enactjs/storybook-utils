@@ -1,6 +1,8 @@
-# unreleased
+## 5.1.1 (September 21, 2023)
 
+* Updated `postcss-preset-env` version to `^9.1.1`.
 * Updated `prettier` version to `^3.0.1` and `eslint-plugin-prettier` version to `^5.0.0`.
+* Updated dependencies.
 
 ## 5.1.0 (June 23, 2023)
 
