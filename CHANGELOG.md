@@ -1,3 +1,7 @@
+## unreleased
+
+* Removed `getCSSModuleLocalIdent` to fix unexpected behaviors in css-loader.
+
 ## 5.1.1 (September 21, 2023)
 
 * Updated `postcss-preset-env` version to `^9.1.1`.
