@@ -46,11 +46,9 @@ const range = (name, storyObj, config, opts, preferredValue, otherOpts) => {
 	}
 
 	// If there is no `otherOpts` object
-	if(!otherOpts) {
+	if (!otherOpts) {
 		otherOpts = {};
 	}
-
-	console.log('otherOpts after ',otherOpts);
 	storyObj.args[name] = preferredValue != null ? preferredValue : config.defaultProps[name];
 	storyObj.argTypes[name] = {
 		control: {
