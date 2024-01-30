@@ -1,9 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
-const getLocalIdent = require('@enact/dev-utils/cssModuleIdent');
 const {DefinePlugin} = require('webpack');
-const {optionParser: app, GracefulFsPlugin, ILibPlugin, WebOSMetaPlugin} = require('@enact/dev-utils');
+const {
+	optionParser: app,
+	cssModuleIdent: getLocalIdent,
+	GracefulFsPlugin,
+	ILibPlugin,
+	WebOSMetaPlugin
+} = require('@enact/dev-utils');
 
 module.exports = function (config, mode, dirname) {
 	const isProduction = mode === 'PRODUCTION';
