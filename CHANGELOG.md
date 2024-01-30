@@ -1,6 +1,7 @@
 ## unreleased
 
 * Removed `getCSSModuleLocalIdent` to fix unexpected behaviors in css-loader.
+* Removed eslint related modules.
 
 ## 5.1.2 (December 21, 2023)
 

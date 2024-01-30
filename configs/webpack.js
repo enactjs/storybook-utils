@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
-const {cssModuleIdent: getLocalIdent} = require('@enact/dev-utils');
+const getLocalIdent = require('@enact/dev-utils/cssModuleIdent');
 const {DefinePlugin} = require('webpack');
 const {optionParser: app, GracefulFsPlugin, ILibPlugin, WebOSMetaPlugin} = require('@enact/dev-utils');
 
