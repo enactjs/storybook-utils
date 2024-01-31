@@ -10,7 +10,7 @@
  * * config - config object with at least a `defaultProps` key containing a map of props and their default values
  * * opts - range-specific control options (opts from the standard Controls docs)
  * * preferredValue - (optional) a sample-specific initially selected value
- * * otherOpts - (optional) other options object unrelated to the control options
+ * * otherOpts - (optional) options specifying argTypes excluding the `control` and `table` keys
  */
 
 const range = (name, storyObj, config, opts, preferredValue, otherOpts) => {
@@ -49,6 +49,7 @@ const range = (name, storyObj, config, opts, preferredValue, otherOpts) => {
 	if (!otherOpts) {
 		otherOpts = {};
 	}
+
 	storyObj.args[name] = preferredValue != null ? preferredValue : config.defaultProps[name];
 	storyObj.argTypes[name] = {
 		control: {
