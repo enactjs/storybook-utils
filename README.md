@@ -13,7 +13,7 @@ npm install --save-dev @enact/storybook-utils
 Unless otherwise specified, all content, including all source code files and
 documentation files in this repository are:
 
-Copyright (c) 2020-2023 LG Electronics
+Copyright (c) 2020-2024 LG Electronics
 
 Unless otherwise specified or set forth in the NOTICE file, all content,
 including all source code files and documentation files in this repository are:
