@@ -1,4 +1,4 @@
-## 5.1.3 (February 20, 2024)
+## 5.1.3 (February 21, 2024)
 
 * Removed `getCSSModuleLocalIdent` to fix unexpected behaviors in css-loader.
 * Removed eslint related modules.
