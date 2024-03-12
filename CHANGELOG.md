@@ -1,3 +1,9 @@
+## unreleased
+
+* Migrated to storybook 7.
+* Updated the minimum version of Node to `16.10.0`.
+* Removed custom docs addon and `@storybook/addon-docs` dependency because storybook 7 doesn't allow customization of `@storybook/addon-docs`.
+
 ## 5.1.3 (February 21, 2024)
 
 * Removed `getCSSModuleLocalIdent` to fix unexpected behaviors in css-loader.

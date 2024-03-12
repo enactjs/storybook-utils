@@ -80,7 +80,9 @@ module.exports = function (config, mode, dirname) {
 	config.resolve.alias = Object.assign({}, config.resolve.alias, {
 		// coerce everything to use the ilib installed with the sampler
 		// since it is set as a peer dependency by the enact modules
-		ilib: path.resolve(app.context, 'node_modules/ilib')
+		ilib: path.resolve(app.context, 'node_modules/ilib'),
+		// workaround for storybook 7 to avoid different versions of React being used
+		react: path.resolve(app.context, 'node_modules/react')
 	});
 	config.performance = false;
 
@@ -144,20 +146,6 @@ module.exports = function (config, mode, dirname) {
 			type: 'asset/resource'
 		}
 	);
-
-	// Run `source-loader` on story files to show their source code
-	// automatically in `DocsPage` or the `Source` doc block.
-	config.module.rules.push({
-		test: /\.([jt]sx?)$/,
-		loader: require.resolve('@storybook/source-loader'),
-		exclude: [/node_modules/],
-		enforce: 'pre',
-		options: {
-			injectParameters: true,
-			inspectLocalDependencies: false,
-			inspectDependencies: false
-		}
-	});
 
 	config.plugins.push(
 		new DefinePlugin({

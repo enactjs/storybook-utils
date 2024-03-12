@@ -7,7 +7,7 @@
   "repository": "https://github.com/enactjs/storybook-utils/",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^14.15.0 || ^16.10.0 || >=18.0.0"
+    "node": "^16.10.0 || >=18.0.0"
   },
   "publishConfig": {
     "access": "public"
@@ -27,10 +27,9 @@
   },
   "dependencies": {
     "@enact/dev-utils": "^6.1.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-controls": "^6.5.16",
-    "@storybook/addon-docs": "^6.5.16",
-    "@storybook/addon-toolbars": "^6.5.16",
+    "@storybook/addon-actions": "^7.6.17",
+    "@storybook/addon-controls": "^7.6.17",
+    "@storybook/addon-toolbars": "^7.6.17",
     "babel-preset-enact": "^0.1.7",
     "css-loader": "^6.9.0",
     "less": "^4.2.0",
@@ -46,8 +45,8 @@
     "postcss-resolution-independence": "^1.1.5"
   },
   "devDependencies": {
-    "@storybook/react": "^6.5.16",
-    "@storybook/source-loader": "^6.5.16",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-webpack5": "^7.6.17",
     "babel-loader": "^9.1.3",
     "eslint": "^8.56.0",
     "eslint-config-enact": "^4.2.0",
