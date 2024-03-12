@@ -3,7 +3,22 @@
 * Migrated to storybook 7.
 * Updated the minimum version of Node to `16.10.0`.
 * Removed custom docs addon and `@storybook/addon-docs` dependency because storybook 7 doesn't allow customization of `@storybook/addon-docs`.
+
+## 5.1.3 (February 21, 2024)
+
+* Removed `getCSSModuleLocalIdent` to fix unexpected behaviors in css-loader.
+* Removed eslint related modules.
+
+## 5.1.2 (December 21, 2023)
+
+* Updated `eslint-config-prettier` version to `^9.0.0`.
+* Updated dependencies.
+
+## 5.1.1 (September 21, 2023)
+
+* Updated `postcss-preset-env` version to `^9.1.1`.
 * Updated `prettier` version to `^3.0.1` and `eslint-plugin-prettier` version to `^5.0.0`.
+* Updated dependencies.
 
 ## 5.1.0 (June 23, 2023)
 
