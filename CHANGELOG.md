@@ -1,7 +1,7 @@
 ## unreleased
 
-* Migrated to storybook 7.
-* Updated the minimum version of Node to `16.10.0`.
+* Migrated to storybook 8.
+* Updated the minimum version of Node to `18.0.0`.
 * Removed custom docs addon and `@storybook/addon-docs` dependency because storybook 7 doesn't allow customization of `@storybook/addon-docs`.
 
 ## 5.1.3 (February 21, 2024)
