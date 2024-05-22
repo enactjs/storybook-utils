@@ -1,6 +1,6 @@
 ## unreleased
 
-* Fixed `mergeComponentMetadata` function to get defaultProps and defaultPropValues of components.
+* Fixed `mergeComponentMetadata` to take default prop values from `defaultPropValues` as well as `defaultProps` since `defaultProps` in function component has been deprecated.
 
 ## 5.1.3 (February 21, 2024)
 
