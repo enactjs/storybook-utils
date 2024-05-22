@@ -38,11 +38,12 @@ const object = (name, storyObj, config, preferredObject) => {
 	}
 
 	// If there is no `defaultProps` object on the config object
-	if (!config.defaultProps) {
-		config.defaultProps = {};
+	let defaultProps = config.defaultProps;
+	if (!defaultProps) {
+		defaultProps = {};
 	}
 
-	storyObj.args[name] = nullify(preferredObject || config.defaultProps[name]);
+	storyObj.args[name] = nullify(preferredObject || defaultProps[name]);
 	storyObj.argTypes[name] = {
 		control: {
 			type: 'object'

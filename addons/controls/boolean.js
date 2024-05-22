@@ -30,8 +30,9 @@ const boolean = (name, storyObj, config, preferredValue) => {
 	}
 
 	// If there is no `defaultProps` object on the config object
-	if (!config.defaultProps) {
-		config.defaultProps = {};
+	let defaultProps = config.defaultProps;
+	if (!defaultProps) {
+		defaultProps = {};
 	}
 
 	// If there's no group ID but there is a display name, use that for the group ID
@@ -40,7 +41,7 @@ const boolean = (name, storyObj, config, preferredValue) => {
 	}
 
 	// Set false for default boolean props that are not defined.
-	const defaultValue = config.defaultProps[name] != null ? config.defaultProps[name] : false;
+	const defaultValue = defaultProps[name] != null ? defaultProps[name] : false;
 
 	storyObj.args[name] = preferredValue != null ? preferredValue : defaultValue;
 	storyObj.argTypes[name] = {
