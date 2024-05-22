@@ -38,11 +38,12 @@ const text = (name, storyObj, config, preferredValue) => {
 	}
 
 	// If there is no `defaultProps` object on the Config object
-	if (!config.defaultProps) {
-		config.defaultProps = {};
+	let defaultProps = config.defaultProps;
+	if (!defaultProps) {
+		defaultProps = {};
 	}
 
-	storyObj.args[name] = nullify(preferredValue != null ? preferredValue : config.defaultProps[name]);
+	storyObj.args[name] = nullify(preferredValue != null ? preferredValue : defaultProps[name]);
 	storyObj.argTypes[name] = {
 		control: {
 			type: 'text'
