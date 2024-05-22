@@ -1,3 +1,7 @@
+## unreleased
+
+* Fixed `mergeComponentMetadata` function to get defaultProps and defaultPropValues of components.
+
 ## 5.1.3 (February 21, 2024)
 
 * Removed `getCSSModuleLocalIdent` to fix unexpected behaviors in css-loader.
