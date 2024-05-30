@@ -7,7 +7,7 @@ const mergeComponentMetadata = (displayName, ...components) => {
 	fn.displayName = displayName;
 	fn.groupId = displayName;
 	fn.propTypes = merge(components, 'propTypes');
-	fn.defaultProps = merge(components, 'defaultProps');
+	fn.defaultProps = Object.assign({}, merge(components, 'defaultProps'), merge(components, 'defaultPropValues'));
 
 	return fn;
 };

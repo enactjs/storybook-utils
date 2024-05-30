@@ -41,12 +41,13 @@ const select = (name, storyObj, items, config, selectedValue) => {
 	}
 
 	// If there is no `defaultProps` object on the config object
-	if (!config.defaultProps) {
-		config.defaultProps = {};
+	let defaultProps = config.defaultProps;
+	if (!defaultProps) {
+		defaultProps = {};
 	}
 
 	const defaultAppender = (key, label = key) => {
-		return (key || '') + (config.defaultProps[name] === label && key ? defaultString : '');
+		return (key || '') + (defaultProps[name] === label && key ? defaultString : '');
 	};
 
 	const replaceNullString = key => {
@@ -65,7 +66,7 @@ const select = (name, storyObj, items, config, selectedValue) => {
 		}
 	}
 
-	const value = nullify(selectedValue != null ? selectedValue : config.defaultProps[name]);
+	const value = nullify(selectedValue != null ? selectedValue : defaultProps[name]);
 	storyObj.args[name] = Object.keys(labels).find(key => labels[key] === value);
 
 	storyObj.argTypes[name] = {
