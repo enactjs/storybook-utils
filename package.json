@@ -7,7 +7,7 @@
   "repository": "https://github.com/enactjs/storybook-utils/",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.12.0"
   },
   "publishConfig": {
     "access": "public"
@@ -33,13 +33,13 @@
     "babel-preset-enact": "^0.1.7",
     "css-loader": "^6.11.0",
     "less": "^4.2.0",
-    "less-loader": "^11.1.4",
+    "less-loader": "^12.2.0",
     "mini-css-extract-plugin": "^2.8.1",
-    "node-polyfill-webpack-plugin": "^2.0.1",
+    "node-polyfill-webpack-plugin": "^3.0.0",
     "postcss": "^8.4.38",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-global-import": "^1.0.6",
-    "postcss-loader": "^7.3.4",
+    "postcss-loader": "^8.1.1",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^9.5.4",
     "postcss-resolution-independence": "^1.1.5"
