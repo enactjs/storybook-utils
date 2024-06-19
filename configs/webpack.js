@@ -145,20 +145,6 @@ module.exports = function (config, mode, dirname) {
 		}
 	);
 
-	// Run `source-loader` on story files to show their source code
-	// automatically in `DocsPage` or the `Source` doc block.
-	config.module.rules.push({
-		test: /\.([jt]sx?)$/,
-		loader: require.resolve('@storybook/source-loader'),
-		exclude: [/node_modules/],
-		enforce: 'pre',
-		options: {
-			injectParameters: true,
-			inspectLocalDependencies: false,
-			inspectDependencies: false
-		}
-	});
-
 	config.plugins.push(
 		new DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),

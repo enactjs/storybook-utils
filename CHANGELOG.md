@@ -1,3 +1,9 @@
+## unreleased
+
+* Migrated to storybook 8.
+* Updated the minimum version of Node to `18.0.0`.
+* Removed custom docs addon and `@storybook/addon-docs` dependency because storybook 7 doesn't allow customization of `@storybook/addon-docs`.
+
 ## 5.1.4 (May 22, 2024)
 
 * Fixed `mergeComponentMetadata` to take default prop values from `defaultPropValues` as well as `defaultProps` since `defaultProps` in function component has been deprecated.
