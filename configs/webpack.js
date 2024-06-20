@@ -23,7 +23,16 @@ module.exports = function (config, mode, dirname) {
 			{
 				loader: require.resolve('css-loader'),
 				options: Object.assign(
-					{importLoaders: preProcessor ? 2 : 1, sourceMap: shouldUseSourceMap},
+					{
+						importLoaders: preProcessor ? 2 : 1,
+						sourceMap: shouldUseSourceMap,
+						// Options to restore 6.x behavior:
+						// https://github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#700-2024-04-04
+						modules: {
+							namedExport: false,
+							exportLocalsConvention: 'as-is'
+						}
+					},
 					cssLoaderOptions
 				)
 			},
