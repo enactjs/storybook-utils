@@ -29,7 +29,8 @@ module.exports = function (config, mode, dirname) {
 						// Options to restore 6.x behavior:
 						// https://github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#700-2024-04-04
 						modules: {
-							namedExport: false
+							namedExport: false,
+							exportLocalsConvention: 'as-is'
 						}
 					},
 					cssLoaderOptions
