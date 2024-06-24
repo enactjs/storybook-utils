@@ -103,7 +103,13 @@ module.exports = function (config, mode, dirname) {
 			test: /\.module\.css$/,
 			use: getStyleLoaders({
 				modules: {
-					getLocalIdent
+					getLocalIdent,
+					// Options to restore 6.x behavior:
+					// https://github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#700-2024-04-04
+					modules: {
+						namedExport: false,
+						exportLocalsConvention: 'as-is'
+					}
 				}
 			})
 		},
@@ -113,7 +119,13 @@ module.exports = function (config, mode, dirname) {
 			// modular CSS support.
 			use: getStyleLoaders({
 				modules: {
-					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'})
+					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'}),
+					// Options to restore 6.x behavior:
+					// https://github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#700-2024-04-04
+					modules: {
+						namedExport: false,
+						exportLocalsConvention: 'as-is'
+					}
 				}
 			}),
 			// Don't consider CSS imports dead code even if the
@@ -126,7 +138,13 @@ module.exports = function (config, mode, dirname) {
 			test: /\.module\.less$/,
 			use: getLessStyleLoaders({
 				modules: {
-					getLocalIdent
+					getLocalIdent,
+					// Options to restore 6.x behavior:
+					// https://github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#700-2024-04-04
+					modules: {
+						namedExport: false,
+						exportLocalsConvention: 'as-is'
+					}
 				}
 			})
 		},
@@ -134,7 +152,13 @@ module.exports = function (config, mode, dirname) {
 			test: /\.less$/,
 			use: getLessStyleLoaders({
 				modules: {
-					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'})
+					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'}),
+					// Options to restore 6.x behavior:
+					// https://github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#700-2024-04-04
+					modules: {
+						namedExport: false,
+						exportLocalsConvention: 'as-is'
+					}
 				}
 			}),
 			sideEffects: true
