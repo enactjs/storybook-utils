@@ -23,10 +23,7 @@ module.exports = function (config, mode, dirname) {
 			{
 				loader: require.resolve('css-loader'),
 				options: Object.assign(
-					{
-						importLoaders: preProcessor ? 2 : 1,
-						sourceMap: shouldUseSourceMap
-					},
+					{importLoaders: preProcessor ? 2 : 1, sourceMap: shouldUseSourceMap},
 					cssLoaderOptions
 				)
 			},
