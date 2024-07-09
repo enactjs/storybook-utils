@@ -1,6 +1,6 @@
 {
   "name": "@enact/storybook-utils",
-  "version": "5.1.4",
+  "version": "6.0.0-rc.1",
   "description": "Helper utilities for using Enact in Storybook projects.",
   "main": "index.js",
   "author": "Jason Robitaille <jason.robitaille@lge.com>",
@@ -34,14 +34,14 @@
     "css-loader": "^7.1.2",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
-    "mini-css-extract-plugin": "^2.8.1",
+    "mini-css-extract-plugin": "^2.9.0",
     "node-polyfill-webpack-plugin": "^3.0.0",
     "postcss": "^8.4.38",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-global-import": "^1.0.6",
     "postcss-loader": "^8.1.1",
     "postcss-normalize": "^10.0.1",
-    "postcss-preset-env": "^9.5.4",
+    "postcss-preset-env": "^9.5.14",
     "postcss-resolution-independence": "^1.1.5"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.2.5",
-    "webpack": "^5.91.0"
+    "prettier": "^3.3.2",
+    "webpack": "^5.92.1"
   }
 }
