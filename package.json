@@ -31,7 +31,7 @@
     "@storybook/addon-controls": "^8.1.6",
     "@storybook/addon-toolbars": "^8.1.6",
     "babel-preset-enact": "^0.1.7",
-    "css-loader": "^6.11.0",
+    "css-loader": "^7.1.2",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "mini-css-extract-plugin": "^2.9.0",

@@ -1,3 +1,7 @@
+## unreleased
+
+* Updated `css-loader` to 7.x and changed `css-loader` options to restore 6.x behavior.
+
 ## 6.0.0-rc.1 (July 9, 2024)
 
 * Migrated to storybook 8.
