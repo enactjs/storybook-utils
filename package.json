@@ -42,7 +42,9 @@
     "postcss-loader": "^8.1.1",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^9.5.14",
-    "postcss-resolution-independence": "^1.1.5"
+    "postcss-resolution-independence": "^1.1.5",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2"
   },
   "devDependencies": {
     "@storybook/react": "~8.2.4",
