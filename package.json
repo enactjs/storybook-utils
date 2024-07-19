@@ -26,7 +26,7 @@
     "arrowParens": "avoid"
   },
   "dependencies": {
-    "@enact/dev-utils": "^6.1.0",
+    "@enact/dev-utils": "github:enactjs/dev-utils#release/7.0.0-alpha.1",
     "@storybook/addon-actions": "^8.2.4",
     "@storybook/addon-controls": "^8.2.4",
     "@storybook/addon-toolbars": "^8.2.4",
@@ -51,7 +51,7 @@
     "@storybook/react-webpack5": "^8.2.4",
     "babel-loader": "^9.1.3",
     "eslint": "^8.57.0",
-    "eslint-config-enact": "^4.2.1",
+    "eslint-config-enact": "github:enactjs/eslint-config-enact#release/5.0.0-alpha.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
