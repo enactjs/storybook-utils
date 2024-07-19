@@ -1,6 +1,6 @@
-function loadStories (stories) {
+const loadStories = stories => {
 	return () => stories.keys().forEach(filename => stories(filename));
-}
+};
 
 export default loadStories;
 export {loadStories};

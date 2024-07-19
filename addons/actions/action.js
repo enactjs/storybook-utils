@@ -1,6 +1,6 @@
 import {action as addonAction} from '@storybook/addon-actions';
 
-function action (eventName, include = ['type']) {
+const action = (eventName, include = ['type']) => {
 	const handler = addonAction(eventName);
 	return ev => {
 		// Ducktyping for React synthetic event to extract the specified members to improve
@@ -17,7 +17,7 @@ function action (eventName, include = ['type']) {
 
 		handler(ev);
 	};
-}
+};
 
 export default action;
 export {action};
