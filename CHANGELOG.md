@@ -1,4 +1,4 @@
-## unreleased
+## 6.0.0-rc.2 (July 22, 2024)
 
 * Updated `css-loader` to 7.x and changed `css-loader` options to restore 6.x behavior.
 
