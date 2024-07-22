@@ -18,13 +18,23 @@ module.exports = function (config, mode, dirname) {
 	app.setEnactTargetsAsDefault();
 
 	const getStyleLoaders = (cssLoaderOptions = {}, preProcessor) => {
+		const mergedCssLoaderOptions = {
+			...cssLoaderOptions,
+			modules: {
+				...cssLoaderOptions.modules,
+				// Options to restore 6.x behavior:
+				// https://github.com/webpack-contrib/css-loader/blob/master/CHANGELOG.md#700-2024-04-04
+				namedExport: false,
+				exportLocalsConvention: 'as-is'
+			}
+		};
 		const loaders = [
 			process.env.INLINE_STYLES ? require.resolve('style-loader') : MiniCssExtractPlugin.loader,
 			{
 				loader: require.resolve('css-loader'),
 				options: Object.assign(
 					{importLoaders: preProcessor ? 2 : 1, sourceMap: shouldUseSourceMap},
-					cssLoaderOptions
+					mergedCssLoaderOptions
 				)
 			},
 			{
@@ -67,6 +77,14 @@ module.exports = function (config, mode, dirname) {
 				lessOptions: {
 					modifyVars: Object.assign({__DEV__: !isProduction}, app.accent)
 				},
+				sourceMap: shouldUseSourceMap
+			}
+		});
+
+	const getScssStyleLoaders = cssLoaderOptions =>
+		getStyleLoaders(cssLoaderOptions, {
+			loader: require.resolve('sass-loader'),
+			options: {
 				sourceMap: shouldUseSourceMap
 			}
 		});
@@ -139,25 +157,22 @@ module.exports = function (config, mode, dirname) {
 			}),
 			sideEffects: true
 		},
+		// Adds support for CSS Modules, but using SASS
+		// using the extension .module.scss or .module.sass
+		{
+			test: /\.module\.(scss|sass)$/,
+			use: getScssStyleLoaders({
+				importLoaders: 3,
+				modules: {
+					getLocalIdent
+				}
+			})
+		},
 		{
 			exclude: [/^$/, /\.(js|mjs|cjs|jsx|ts|tsx)$/, /\.html$/, /\.ejs$/, /\.json$/],
 			type: 'asset/resource'
 		}
 	);
-
-	// Run `source-loader` on story files to show their source code
-	// automatically in `DocsPage` or the `Source` doc block.
-	config.module.rules.push({
-		test: /\.([jt]sx?)$/,
-		loader: require.resolve('@storybook/source-loader'),
-		exclude: [/node_modules/],
-		enforce: 'pre',
-		options: {
-			injectParameters: true,
-			inspectLocalDependencies: false,
-			inspectDependencies: false
-		}
-	});
 
 	config.plugins.push(
 		new DefinePlugin({
