@@ -1,3 +1,7 @@
+## unreleased
+
+* Changed the limit for the number of items logged into the actions panel to 200.
+
 ## 6.0.0-rc.2 (July 22, 2024)
 
 * Updated `css-loader` to 7.x and changed `css-loader` options to restore 6.x behavior.
