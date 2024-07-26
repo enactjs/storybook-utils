@@ -2,7 +2,7 @@ import {configureActions as addonConfigureActions} from '@storybook/addon-action
 
 const configureActions = opts => {
 	return addonConfigureActions({
-		depth:100,
+		depth: 100,
 		// Limit the number of items logged into the actions panel
 		limit: 10,
 		...opts
