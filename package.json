@@ -1,13 +1,13 @@
 {
   "name": "@enact/storybook-utils",
-  "version": "5.1.4",
+  "version": "6.0.0-rc.2",
   "description": "Helper utilities for using Enact in Storybook projects.",
   "main": "index.js",
   "author": "Jason Robitaille <jason.robitaille@lge.com>",
   "repository": "https://github.com/enactjs/storybook-utils/",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^14.15.0 || ^16.10.0 || >=18.0.0"
+    "node": ">=18.12.0"
   },
   "publishConfig": {
     "access": "public"
@@ -26,21 +26,20 @@
     "arrowParens": "avoid"
   },
   "dependencies": {
-    "@enact/dev-utils": "^6.1.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-controls": "^6.5.16",
-    "@storybook/addon-docs": "^6.5.16",
-    "@storybook/addon-toolbars": "^6.5.16",
+    "@enact/dev-utils": "^7.0.0-alpha.1",
+    "@storybook/addon-actions": "^8.2.4",
+    "@storybook/addon-controls": "^8.2.4",
+    "@storybook/addon-toolbars": "^8.2.4",
     "babel-preset-enact": "^0.1.7",
-    "css-loader": "^6.11.0",
+    "css-loader": "^7.1.2",
     "less": "^4.2.0",
-    "less-loader": "^11.1.4",
+    "less-loader": "^12.2.0",
     "mini-css-extract-plugin": "^2.9.0",
-    "node-polyfill-webpack-plugin": "^2.0.1",
+    "node-polyfill-webpack-plugin": "^3.0.0",
     "postcss": "^8.4.38",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-global-import": "^1.0.6",
-    "postcss-loader": "^7.3.4",
+    "postcss-loader": "^8.1.1",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^9.5.14",
     "postcss-resolution-independence": "^1.1.5",
@@ -48,11 +47,11 @@
     "sass-loader": "^13.3.2"
   },
   "devDependencies": {
-    "@storybook/react": "^6.5.16",
-    "@storybook/source-loader": "^6.5.16",
+    "@storybook/react": "^8.2.4",
+    "@storybook/react-webpack5": "^8.2.4",
     "babel-loader": "^9.1.3",
     "eslint": "^8.57.0",
-    "eslint-config-enact": "^4.2.1",
+    "eslint-config-enact": "^5.0.0-alpha.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",

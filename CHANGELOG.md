@@ -1,3 +1,17 @@
+## unreleased
+
+* Changed the limit for the number of items logged into the actions panel to 200.
+
+## 6.0.0-rc.2 (July 22, 2024)
+
+* Updated `css-loader` to 7.x and changed `css-loader` options to restore 6.x behavior.
+
+## 6.0.0-rc.1 (July 9, 2024)
+
+* Migrated to storybook 8.
+* Updated the minimum version of Node to `18.12.0`.
+* Removed custom docs addon and `@storybook/addon-docs` dependency because storybook 7 doesn't allow customization of `@storybook/addon-docs`.
+
 ## 5.1.4 (May 22, 2024)
 
 * Fixed `mergeComponentMetadata` to take default prop values from `defaultPropValues` as well as `defaultProps` since `defaultProps` in function component has been deprecated.
