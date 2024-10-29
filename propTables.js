@@ -2,6 +2,7 @@ const merge = (components, field) => {
 	return Object.assign({}, ...components.map(c => c[field]));
 };
 
+
 const mergeComponentMetadata = (displayName, ...components) => {
 	const fn = function () {};
 	fn.displayName = displayName;
