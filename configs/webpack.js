@@ -179,7 +179,9 @@ module.exports = function (config, mode, dirname) {
 			'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
 			'process.env.PUBLIC_URL': JSON.stringify('.')
 		}),
-		new NodePolyfillPlugin(),
+		new NodePolyfillPlugin({
+			additionalAliases: ['console', 'domain', 'process', 'stream']
+		}),
 		new GracefulFsPlugin(),
 		new ILibPlugin({publicPath}),
 		new WebOSMetaPlugin({path: path.join(dirname, 'webos-meta')})
