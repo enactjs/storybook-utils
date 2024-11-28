@@ -1,6 +1,7 @@
 ## unreleased
 
 * Changed the limit for the number of items logged into the actions panel to 200.
+* Updated Enact ESLint config to `9.1.5` including updating eslint related modules and temporary setting ESLINT_USE_FLAT_CONFIG env variable in package.json.
 
 ## 6.0.0-rc.2 (July 22, 2024)
 
