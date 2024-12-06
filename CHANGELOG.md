@@ -1,4 +1,4 @@
-## unreleased
+## 6.0.0-rc.3 (December 6, 2024)
 
 * Changed the limit for the number of items logged into the actions panel to 200.
 
