@@ -1,3 +1,7 @@
+## unreleased
+
+* Changed classnames to be hashed when production build.
+
 ## 5.1.2 (December 21, 2023)
 
 * Updated `eslint-config-prettier` version to `^9.0.0`.
