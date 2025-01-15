@@ -26,7 +26,7 @@
     "arrowParens": "avoid"
   },
   "dependencies": {
-    "@enact/dev-utils": "^7.0.0-alpha.2",
+    "@enact/dev-utils": "enactjs/dev-utils#feature/eslint9",
     "@storybook/addon-actions": "^8.4.5",
     "@storybook/addon-controls": "^8.4.5",
     "@storybook/addon-toolbars": "^8.4.5",
