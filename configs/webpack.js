@@ -121,7 +121,7 @@ module.exports = function (config, mode, dirname) {
 			test: /\.module\.css$/,
 			use: getStyleLoaders({
 				modules: {
-					getLocalIdent
+					...(isProduction ? {} : {getLocalIdent})
 				}
 			})
 		},
@@ -131,7 +131,8 @@ module.exports = function (config, mode, dirname) {
 			// modular CSS support.
 			use: getStyleLoaders({
 				modules: {
-					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'})
+					...(app.forceCSSModules ? {} : {mode: 'icss'}),
+					...(!app.forceCSSModules && isProduction ? {} : {getLocalIdent})
 				}
 			}),
 			// Don't consider CSS imports dead code even if the
@@ -144,7 +145,7 @@ module.exports = function (config, mode, dirname) {
 			test: /\.module\.less$/,
 			use: getLessStyleLoaders({
 				modules: {
-					getLocalIdent
+					...(isProduction ? {} : {getLocalIdent})
 				}
 			})
 		},
@@ -152,7 +153,8 @@ module.exports = function (config, mode, dirname) {
 			test: /\.less$/,
 			use: getLessStyleLoaders({
 				modules: {
-					...(app.forceCSSModules ? {getLocalIdent} : {mode: 'icss'})
+					...(app.forceCSSModules ? {} : {mode: 'icss'}),
+					...(!app.forceCSSModules && isProduction ? {} : {getLocalIdent})
 				}
 			}),
 			sideEffects: true
