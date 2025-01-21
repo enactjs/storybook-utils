@@ -2,7 +2,7 @@ module.exports = {
 	env: {
 		node: true
 	},
-	extends: ['enact/strict'],
+	extends: ['enact/strict', 'plugin:prettier/recommended', 'prettier'],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true
@@ -24,6 +24,12 @@ module.exports = {
 			{
 				'newlines-between': 'never',
 				groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
+			}
+		],
+		'@stylistic/js/space-before-function-paren': [
+			'warn',
+			{
+				named: 'never'
 			}
 		]
 	}
