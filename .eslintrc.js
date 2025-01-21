@@ -2,7 +2,7 @@ module.exports = {
 	env: {
 		node: true
 	},
-	extends: ['enact/strict', 'plugin:prettier/recommended', 'prettier'],
+	extends: ['enact/strict'],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true
