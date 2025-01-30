@@ -22,14 +22,12 @@ module.exports = [
 		plugins: {
 			import: importPlugin,
 			prettier: prettierPlugin
-		}
-	},
-	{
-		plugins: {
-			import: importPlugin
 		},
 		rules: {
+			// react rules
 			'react/forbid-foreign-prop-types': 'off', // proptypes not removed in storybook config
+
+			// import plugin rules
 			'import/no-unresolved': ['error', {commonjs: true, caseSensitive: true}],
 			'import/named': 'error',
 			'import/first': 'warn',
@@ -43,19 +41,16 @@ module.exports = [
 					groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
 				}
 			],
+
+			// @stylistic/js rules
 			'@stylistic/js/space-before-function-paren': [
 				'warn',
 				{
 					named: 'never'
 				}
-			]
-		}
-	},
-	{
-		plugins: {
-			prettier: prettierPlugin
-		},
-		rules: {
+			],
+
+			// prettier rules
 			...prettierPlugin.configs.recommended.rules,
 			...prettierConfig.rules
 		}
