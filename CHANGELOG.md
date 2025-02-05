@@ -1,6 +1,6 @@
 ## unreleased
 
-* Updated Enact ESLint config to `9.1.5` including eslint related modules and set temporary ESLINT_USE_FLAT_CONFIG env variable in `package.json`.
+* Updated Enact ESLint config to v9 including eslint related modules and set temporary ESLINT_USE_FLAT_CONFIG env variable in `package.json`.
 * Changed classnames to be hashed when production build.
 
 ## 6.0.0-rc.3 (December 6, 2024)
