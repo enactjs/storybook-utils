@@ -1,4 +1,4 @@
-function loadStories(stories) {
+function loadStories (stories) {
 	return () => stories.keys().forEach(filename => stories(filename));
 }
 
