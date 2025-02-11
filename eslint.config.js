@@ -1,11 +1,9 @@
-const enactConfig = require('eslint-config-enact');
-const prettierConfig = require('eslint-config-prettier');
+const enactStrict = require('eslint-config-enact/strict');
 const importPlugin = require('eslint-plugin-import');
-const prettierPlugin = require('eslint-plugin-prettier');
 const globals = require('globals');
 
 module.exports = [
-	...enactConfig,
+	...enactStrict,
 	{
 		languageOptions: {
 			ecmaVersion: 'latest',
@@ -20,8 +18,7 @@ module.exports = [
 			}
 		},
 		plugins: {
-			import: importPlugin,
-			prettier: prettierPlugin
+			import: importPlugin
 		},
 		rules: {
 			// react rules
@@ -40,19 +37,7 @@ module.exports = [
 					'newlines-between': 'never',
 					groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
 				}
-			],
-
-			// @stylistic/js rules
-			'@stylistic/js/space-before-function-paren': [
-				'warn',
-				{
-					named: 'never'
-				}
-			],
-
-			// prettier rules
-			...prettierPlugin.configs.recommended.rules,
-			...prettierConfig.rules
+			]
 		}
 	}
 ];
