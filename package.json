@@ -17,7 +17,7 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
-    "@enact/dev-utils": "enactjs/dev-utils#feature/eslint9",
+    "@enact/dev-utils": "enactjs/dev-utils#feature/WRR-12625",
     "@storybook/addon-actions": "^8.5.4",
     "@storybook/addon-controls": "^8.5.4",
     "@storybook/addon-toolbars": "^8.5.4",
