@@ -1,5 +1,6 @@
 ## unreleased
 
+* Updated `eslint` to v9 and adopted flat config.
 * Removed `prettier`, `eslint-config-prettier` and `eslint-plugin-prettier`.
 * Changed classnames to be hashed when production build.
 
