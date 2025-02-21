@@ -9,7 +9,7 @@
       "version": "6.0.0-rc.3",
       "license": "Apache-2.0",
       "dependencies": {
-        "@enact/dev-utils": "enactjs/dev-utils#develop",
+        "@enact/dev-utils": "^7.0.0-alpha.4",
         "@storybook/addon-actions": "^8.5.8",
         "@storybook/addon-controls": "^8.5.8",
         "@storybook/addon-toolbars": "^8.5.8",
