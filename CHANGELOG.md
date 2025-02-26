@@ -1,4 +1,4 @@
-## unreleased
+## 6.0.0-rc.4 (February 26, 2025)
 
 * Updated `eslint` to v9 and adopted flat config.
 * Changed classnames to be hashed when production build.
