@@ -59,7 +59,17 @@ module.exports = function (config, mode, dirname) {
 								}
 							],
 							require('postcss-normalize'),
-							app.ri && require('postcss-resolution-independence')(app.ri)
+							app.ri && require('postcss-resolution-independence')(app.ri),
+							// Support importing JSON files in CSS
+							[
+								'@daltontan/postcss-import-json',
+								{
+									map: (selector, value) => {
+										// Convert JSON values to CSS variables
+										return String(value).startsWith('ref') ? `var(--${value});` : value;
+									}
+								}
+							]
 						].filter(Boolean)
 					},
 					sourceMap: shouldUseSourceMap
