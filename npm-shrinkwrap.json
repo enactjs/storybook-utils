@@ -21,7 +21,6 @@
         "node-polyfill-webpack-plugin": "4.0.0",
         "postcss": "^8.5.3",
         "postcss-flexbugs-fixes": "^5.0.2",
-        "postcss-global-import": "^1.0.6",
         "postcss-loader": "^8.1.1",
         "postcss-normalize": "^13.0.1",
         "postcss-preset-env": "^10.1.4",
@@ -24657,15 +24656,6 @@
         "url": "https://github.com/sponsors/fb55"
       }
     },
-    "node_modules/css-selector-tokenizer": {
-      "version": "0.7.3",
-      "resolved": "https://registry.npmjs.org/css-selector-tokenizer/-/css-selector-tokenizer-0.7.3.tgz",
-      "integrity": "sha512-jWQv3oCEL5kMErj4wRnK/OPoBi0D+P1FR2cDCKYPaMeD2eW3/mttav8HT4hT1CKopiJI/psEULjkClhvJo4Lvg==",
-      "dependencies": {
-        "cssesc": "^3.0.0",
-        "fastparse": "^1.1.2"
-      }
-    },
     "node_modules/css-what": {
       "version": "6.1.0",
       "resolved": "https://registry.npmjs.org/css-what/-/css-what-6.1.0.tgz",
@@ -35142,11 +35132,6 @@
         }
       ]
     },
-    "node_modules/fastparse": {
-      "version": "1.1.2",
-      "resolved": "https://registry.npmjs.org/fastparse/-/fastparse-1.1.2.tgz",
-      "integrity": "sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ=="
-    },
     "node_modules/file-entry-cache": {
       "version": "8.0.0",
       "resolved": "https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-8.0.0.tgz",
@@ -35992,6 +35977,7 @@
       "version": "2.16.1",
       "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.16.1.tgz",
       "integrity": "sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==",
+      "dev": true,
       "dependencies": {
         "hasown": "^2.0.2"
       },
@@ -37246,7 +37232,8 @@
     "node_modules/path-parse": {
       "version": "1.0.7",
       "resolved": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz",
-      "integrity": "sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw=="
+      "integrity": "sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==",
+      "dev": true
     },
     "node_modules/path-type": {
       "version": "4.0.0",
@@ -37761,16 +37748,6 @@
       },
       "peerDependencies": {
         "postcss": "^8.4"
-      }
-    },
-    "node_modules/postcss-global-import": {
-      "version": "1.0.6",
-      "resolved": "https://registry.npmjs.org/postcss-global-import/-/postcss-global-import-1.0.6.tgz",
-      "integrity": "sha512-+vACUVuINEqRiN9gZsR6inKMSqSDmT19FDzhvouB0CXyQ1ARI+lhEGTPtNm1E+ymTzV6aAPfA7jo6tVimHKSDw==",
-      "dependencies": {
-        "css-selector-tokenizer": "^0.7.0",
-        "postcss": "^6.0.14",
-        "resolve": "^1.1.7"
       }
     },
     "node_modules/postcss-image-set-function": {
@@ -38586,6 +38563,7 @@
       "version": "1.22.10",
       "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.22.10.tgz",
       "integrity": "sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==",
+      "dev": true,
       "dependencies": {
         "is-core-module": "^2.16.0",
         "path-parse": "^1.0.7",
@@ -39270,6 +39248,7 @@
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz",
       "integrity": "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==",
+      "dev": true,
       "engines": {
         "node": ">= 0.4"
       },
