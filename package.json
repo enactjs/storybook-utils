@@ -45,8 +45,5 @@
     "eslint-plugin-import": "^2.31.0",
     "globals": "^15.15.0",
     "webpack": "^5.98.0"
-  },
-  "overrides": {
-    "postcss": "^8.5.3"
   }
 }
