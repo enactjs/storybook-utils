@@ -1,7 +1,7 @@
 dist: focal
 language: node_js
 node_js:
-    - "18"
+    - node
 sudo: false
 install:
     - npm config set prefer-offline false
