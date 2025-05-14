@@ -17,7 +17,7 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
-    "@enact/dev-utils": "^7.0.0-alpha.4",
+    "@enact/dev-utils": "github:enactjs/dev-utils#test/7.0.0-rc.1",
     "@storybook/addon-actions": "^8.5.8",
     "@storybook/addon-controls": "^8.5.8",
     "@storybook/addon-toolbars": "^8.5.8",
@@ -41,7 +41,7 @@
     "@storybook/react-webpack5": "^8.5.8",
     "babel-loader": "^9.2.1",
     "eslint": "^9.20.1",
-    "eslint-config-enact": "^5.0.0-alpha.5",
+    "eslint-config-enact": "github:enactjs/eslint-config-enact#test/5.0.0-rc.1",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^15.15.0",
     "webpack": "^5.98.0"
