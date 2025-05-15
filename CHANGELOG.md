@@ -1,3 +1,7 @@
+## 6.0.0-rc.5 (May 15, 2025)
+
+* Removed deprecated postcss plugin `postcss-global-import`.
+
 ## 6.0.0-rc.4 (February 26, 2025)
 
 * Updated `eslint` to v9 and adopted flat config.
