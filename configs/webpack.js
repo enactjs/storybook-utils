@@ -46,7 +46,6 @@ module.exports = function (config, mode, dirname) {
 						ident: 'postcss',
 						plugins: [
 							'postcss-flexbugs-fixes',
-							'postcss-global-import',
 							[
 								'postcss-preset-env',
 								{
