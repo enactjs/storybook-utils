@@ -1,4 +1,4 @@
-import {action as addonAction} from '@storybook/addon-actions';
+import {action as addonAction} from 'storybook/actions';
 
 function action (eventName, include = ['type']) {
 	const handler = addonAction(eventName);

@@ -1,1 +1,1 @@
-import '@storybook/addon-actions/manager';
+import {manager} from 'storybook/actions';

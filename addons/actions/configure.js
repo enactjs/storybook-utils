@@ -1,4 +1,4 @@
-import {configureActions as addonConfigureActions} from '@storybook/addon-actions';
+import {configureActions as addonConfigureActions} from 'storybook/actions';
 
 function configureActions (opts) {
 	return addonConfigureActions({
