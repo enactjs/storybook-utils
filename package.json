@@ -44,6 +44,6 @@
     "eslint-config-enact": "^5.0.0",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^15.15.0",
-    "webpack": "^5.99.9"
+    "webpack": "^5.98.0"
   }
 }
