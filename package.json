@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@storybook/react-webpack5": "^9.0.12",
-    "babel-loader": "^9.2.1",
+    "babel-loader": "^10.0.0",
     "eslint": "^9.20.1",
     "eslint-config-enact": "^5.0.0",
     "eslint-plugin-import": "^2.31.0",
