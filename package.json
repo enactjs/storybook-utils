@@ -17,6 +17,7 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
+    "@daltontan/postcss-import-json": "^1.1.1",
     "@enact/dev-utils": "^7.0.0",
     "babel-preset-enact": "^0.1.12",
     "css-loader": "^7.1.2",

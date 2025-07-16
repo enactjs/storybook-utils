@@ -58,7 +58,22 @@ module.exports = function (config, mode, dirname) {
 								}
 							],
 							require('postcss-normalize'),
-							app.ri && require('postcss-resolution-independence')(app.ri)
+							app.ri && require('postcss-resolution-independence')(app.ri),
+							// Support importing JSON files in CSS
+							[
+								'@daltontan/postcss-import-json',
+								{
+									map: (selector, value) => {
+										if (typeof value === 'object' && value !== null && value.$ref) {
+											const tokenPath = value.$ref.split('#/')[1];
+											const cssVariableName = '--' + tokenPath.replace(/\//g, '-');
+
+											return `var(${cssVariableName})`;
+										}
+										return value;
+									}
+								}
+							]
 						].filter(Boolean)
 					},
 					sourceMap: shouldUseSourceMap
