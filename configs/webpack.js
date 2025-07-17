@@ -123,13 +123,10 @@ module.exports = function (config, mode, dirname) {
 													}
 
 													if (!found) {
-														console.warn(`Could not resolve module path: ${packagePath}`);
+														// Module path could not be resolved: ${packagePath}
 													}
 												} catch (fallbackError) {
-													console.warn(
-														`Failed to resolve ${packagePath}:`,
-														fallbackError.message
-													);
+													// Failed to resolve ${packagePath}: ${fallbackError.message}
 												}
 											}
 										}
