@@ -1,3 +1,10 @@
+## 7.0.0 (July 18, 2025)
+
+* Updated `babel-loader` version to `^10.0.0`.
+* Updated `globals` version to `^16.2.0`.
+* Updated `storybook` version to `^9.0.12`.
+* Added `@daltontan/postcss-import-json` PostCSS plugin to process JSON imports in CSS.
+
 ## 6.0.0 (June 10, 2025)
 
 * Updated dependencies.

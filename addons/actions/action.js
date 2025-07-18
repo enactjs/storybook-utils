@@ -1,4 +1,5 @@
-import {action as addonAction} from '@storybook/addon-actions';
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import {action as addonAction} from 'storybook/actions';
 
 function action (eventName, include = ['type']) {
 	const handler = addonAction(eventName);
