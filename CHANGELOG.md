@@ -1,4 +1,4 @@
-## unreleased
+## 7.0.0 (July 18, 2025)
 
 * Updated `babel-loader` version to `^10.0.0`.
 * Updated `globals` version to `^16.2.0`.
