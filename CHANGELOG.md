@@ -1,4 +1,4 @@
-## unreleased
+## 7.0.1 (July 21, 2025)
 
 * Fixed addons/controls to have a required `manager.js` file.
 

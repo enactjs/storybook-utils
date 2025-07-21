@@ -1,12 +1,12 @@
 {
   "name": "@enact/storybook-utils",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "@enact/storybook-utils",
-      "version": "7.0.0",
+      "version": "7.0.1",
       "license": "Apache-2.0",
       "dependencies": {
         "@daltontan/postcss-import-json": "^1.1.1",
