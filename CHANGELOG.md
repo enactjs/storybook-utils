@@ -1,3 +1,7 @@
+## 7.0.1 (July 21, 2025)
+
+* Fixed addons/controls to have a required `manager.js` file.
+
 ## 7.0.0 (July 18, 2025)
 
 * Updated `babel-loader` version to `^10.0.0`.
