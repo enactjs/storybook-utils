@@ -24,7 +24,7 @@
     "less": "^4.4.1",
     "less-loader": "^12.3.0",
     "mini-css-extract-plugin": "^2.9.4",
-    "node-polyfill-webpack-plugin": "4.1.0",
+    "node-polyfill-webpack-plugin": "4.0.0",
     "postcss": "^8.5.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^8.2.0",
