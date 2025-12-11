@@ -1,1 +1,1 @@
-module.exports = require('babel-preset-enact');
+export {default} from 'babel-preset-enact';
