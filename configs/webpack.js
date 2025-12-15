@@ -308,4 +308,4 @@ export default function (config, mode, dirname) {
 	}
 
 	return config;
-};
+}
