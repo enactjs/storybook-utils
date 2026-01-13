@@ -1,6 +1,6 @@
 {
   "name": "@enact/storybook-utils",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "Helper utilities for using Enact in Storybook projects.",
   "main": "index.js",
   "author": "Jason Robitaille <jason.robitaille@lge.com>",
@@ -18,10 +18,10 @@
   },
   "dependencies": {
     "@daltontan/postcss-import-json": "^1.1.1",
-    "@enact/dev-utils": "^7.0.2",
-    "babel-preset-enact": "^0.1.14",
+    "@enact/dev-utils": "^7.0.3",
+    "babel-preset-enact": "^0.1.15",
     "css-loader": "^7.1.2",
-    "less": "^4.4.1",
+    "less": "^4.4.2",
     "less-loader": "^12.3.0",
     "mini-css-extract-plugin": "^2.9.4",
     "node-polyfill-webpack-plugin": "4.0.0",
@@ -29,19 +29,19 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^8.2.0",
     "postcss-normalize": "^13.0.1",
-    "postcss-preset-env": "^10.4.0",
+    "postcss-preset-env": "^10.5.0",
     "postcss-resolution-independence": "^1.1.9",
-    "sass": "^1.93.2",
-    "sass-loader": "^16.0.5",
+    "sass": "^1.95.0",
+    "sass-loader": "^16.0.6",
     "storybook": "^9.1.16"
   },
   "devDependencies": {
     "@storybook/react-webpack5": "^9.1.16",
     "babel-loader": "^10.0.0",
-    "eslint": "^9.36.0",
-    "eslint-config-enact": "^5.0.2",
+    "eslint": "^9.39.1",
+    "eslint-config-enact": "^5.0.3",
     "eslint-plugin-import": "^2.32.0",
-    "globals": "^16.4.0",
-    "webpack": "^5.101.3"
+    "globals": "^16.5.0",
+    "webpack": "^5.103.0"
   }
 }
