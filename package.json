@@ -33,10 +33,10 @@
     "postcss-resolution-independence": "^1.1.9",
     "sass": "^1.95.0",
     "sass-loader": "^16.0.6",
-    "storybook": "^10.2.10"
+    "storybook": "^10.2.15"
   },
   "devDependencies": {
-    "@storybook/react-webpack5": "^10.2.10",
+    "@storybook/react-webpack5": "^10.2.15",
     "babel-loader": "^10.0.0",
     "eslint": "^9.39.1",
     "eslint-config-enact": "^5.0.3",
