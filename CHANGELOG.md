@@ -1,3 +1,7 @@
+## [unreleased]
+
+* Updated dependencies.
+
 ## 7.0.3 (January 13, 2026)
 
 * Updated dependencies.
