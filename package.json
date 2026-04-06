@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@daltontan/postcss-import-json": "^1.1.1",
-    "@enact/dev-utils": "^7.0.3",
-    "babel-preset-enact": "^0.1.15",
+    "@enact/dev-utils": "github:enactjs/dev-utils#test/7.0.4",
+    "babel-preset-enact": "github:enactjs/babel-preset-enact#release/0.1.16",
     "css-loader": "^7.1.4",
     "less": "^4.5.1",
     "less-loader": "^12.3.1",
@@ -30,7 +30,7 @@
     "postcss-loader": "^8.2.1",
     "postcss-normalize": "^13.0.1",
     "postcss-preset-env": "^11.2.0",
-    "postcss-resolution-independence": "^1.1.9",
+    "postcss-resolution-independence": "github:enactjs/postcss-resolution-independence#release/1.1.10",
     "sass": "^1.97.3",
     "sass-loader": "^16.0.7",
     "storybook": "^10.2.15"
@@ -39,9 +39,9 @@
     "@storybook/react-webpack5": "^10.2.15",
     "babel-loader": "^10.0.0",
     "eslint": "^9.39.3",
-    "eslint-config-enact": "^5.0.3",
+    "eslint-config-enact": "github:enactjs/eslint-config-enact#test/5.0.4",
     "eslint-plugin-import": "^2.32.0",
     "globals": "^17.4.0",
-    "webpack": "^5.105.4"
+    "webpack": "5.105.3"
   }
 }
