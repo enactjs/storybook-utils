@@ -1,3 +1,12 @@
+## 8.0.0 (April 7, 2026)
+
+* Updated `globals` version to `^17.4.0`.
+* Updated `postcss-preset-env` version to `^11.2.0`.
+* Updated `storybook` version to `^10.2.15`.
+* Updated `@storybook/react-webpack5` version to `^10.2.15`.
+* Updated the minimum version of Node to `^20.19.0 || >=22.12.0`.
+* Updated dependencies.
+
 ## 7.0.3 (January 13, 2026)
 
 * Updated dependencies.

@@ -1,17 +1,24 @@
-const fs = require('fs');
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
-const {DefinePlugin} = require('webpack');
+/* eslint-disable no-shadow */
+
+import fs from 'fs';
+import path from 'path';
+import {createRequire} from 'module';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
+import webpack from 'webpack';
+import devUtils from '@enact/dev-utils';
+
 const {
 	optionParser: app,
 	cssModuleIdent: getLocalIdent,
 	GracefulFsPlugin,
 	ILibPlugin,
 	WebOSMetaPlugin
-} = require('@enact/dev-utils');
+} = devUtils;
 
-module.exports = function (config, mode, dirname) {
+const require = createRequire(import.meta.url);
+
+export default function (config, mode, dirname) {
 	const isProduction = mode === 'PRODUCTION';
 	const shouldUseSourceMap = (process.env.GENERATE_SOURCEMAP || 'true') !== 'false';
 	const publicPath = '';
@@ -265,7 +272,7 @@ module.exports = function (config, mode, dirname) {
 	);
 
 	config.plugins.push(
-		new DefinePlugin({
+		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
 			'process.env.PUBLIC_URL': JSON.stringify('.')
 		}),
@@ -301,4 +308,4 @@ module.exports = function (config, mode, dirname) {
 	}
 
 	return config;
-};
+}
