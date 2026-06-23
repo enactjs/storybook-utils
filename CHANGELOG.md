@@ -3,6 +3,10 @@
 * Updated `less-loader` version to `^13.0.0`.
 * Updated `sass-loader` version to `^17.0.0`.
 
+## 8.0.1 (June 23, 2026)
+
+* Updated dependencies.
+
 ## 8.0.0 (April 7, 2026)
 
 * Updated `globals` version to `^17.4.0`.
