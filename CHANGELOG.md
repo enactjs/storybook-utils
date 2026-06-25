@@ -2,6 +2,7 @@
 
 * Updated `less-loader` version to `^13.0.0`.
 * Updated `sass-loader` version to `^17.0.0`.
+* Updated the minimum version of Node to `>=22.12.0`.
 
 ## 8.0.1 (June 23, 2026)
 
