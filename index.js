@@ -8,3 +8,4 @@ export * from './propTables';
 export * from './nullify';
 export * from './emptify';
 export * as addons from './addons';
+export * as decorators from './decorators';
