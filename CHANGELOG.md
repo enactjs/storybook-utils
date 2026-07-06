@@ -1,4 +1,4 @@
-## unreleased
+## 8.0.2 (July 6, 2026)
 
 * Updated `less-loader` version to `^13.0.0`.
 * Updated `sass-loader` version to `^17.0.0`.
