@@ -1,3 +1,11 @@
+## 8.0.4 (September 2, 2026)
+
+* Updated dependencies.
+
+## 8.0.3 (August 21, 2026)
+
+* Updated dependencies.
+
 ## 8.0.2 (July 7, 2026)
 
 * Updated `less-loader` version to `^13.0.0`.
