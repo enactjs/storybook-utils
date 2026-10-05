@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@daltontan/postcss-import-json": "^1.1.1",
-    "@enact/dev-utils": "^7.0.6",
+    "@enact/dev-utils": "enactjs/dev-utils#feature/NXT-10859",
     "babel-preset-enact": "^0.1.18",
     "css-loader": "^7.1.5",
     "less": "^4.9.0",
@@ -39,7 +39,7 @@
     "@storybook/react-webpack5": "^10.5.10",
     "babel-loader": "^10.1.1",
     "eslint": "^10.11.0",
-    "eslint-config-enact": "^5.1.3",
+    "eslint-config-enact": "enactjs/eslint-config-enact#feature/NXT-10859",
     "eslint-plugin-import-x": "^4.17.1",
     "globals": "^17.12.0",
     "webpack": "^5.110.3"
