@@ -1,5 +1,5 @@
 const enactStrict = require('eslint-config-enact/strict');
-const importPlugin = require('eslint-plugin-import');
+const importPlugin = require('eslint-plugin-import-x');
 const globals = require('globals');
 
 module.exports = [
@@ -21,9 +21,6 @@ module.exports = [
 			import: importPlugin
 		},
 		rules: {
-			// react rules
-			'react/forbid-foreign-prop-types': 'off', // proptypes not removed in storybook config
-
 			// import plugin rules
 			'import/no-unresolved': ['error', {commonjs: true, caseSensitive: true}],
 			'import/named': 'error',
