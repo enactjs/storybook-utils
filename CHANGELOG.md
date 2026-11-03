@@ -1,4 +1,4 @@
-## unreleased
+## 8.1.0 (November 3, 2026)
 
 * Updated `eslint` to version 10 and replaced `eslint-plugin-import` with `eslint-plugin-import-x`.
 
